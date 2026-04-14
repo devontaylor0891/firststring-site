@@ -1,0 +1,43 @@
+<section class="addons section">
+  <div class="container">
+    <div class="addons__header">
+      <div class="addons__header-text">
+        <h2 class="addons__title">Powerful Add-ons</h2>
+        <p class="addons__sub text-sub">
+          Extend FirstString with optional features when your team needs more.
+        </p>
+      </div>
+      <button
+        class="pill-btn pill-btn-secondary addons__toggle"
+        (click)="toggleAddOns()"
+        [attr.aria-expanded]="showAddOns()"
+      >
+        {{ showAddOns() ? 'Hide Add-ons' : 'Show Add-ons' }}
+      </button>
+    </div>
+
+    @if (showAddOns()) {
+      <div class="addons__grid">
+        @for (addon of addOns; track addon.name) {
+          <div class="addon-card">
+            <div class="addon-card__icon">{{ addon.icon }}</div>
+            <div class="addon-card__name">{{ addon.name }}</div>
+            <div class="addon-card__price">{{ addon.price }}</div>
+            <p class="addon-card__desc text-sub">{{ addon.description }}</p>
+            @if (addon.note) {
+              <div class="addon-card__note badge">{{ addon.note }}</div>
+            }
+            <ul class="addon-card__features">
+              @for (feature of addon.features; track feature) {
+                <li class="addon-card__feature">
+                  <span class="addon-card__check">✓</span>
+                  {{ feature }}
+                </li>
+              }
+            </ul>
+          </div>
+        }
+      </div>
+    }
+  </div>
+</section>

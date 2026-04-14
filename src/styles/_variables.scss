@@ -1,0 +1,19 @@
+:root {
+  --navy: #1b2f6e;
+  --navy-dark: #152559;
+  --surface: #f0f3fa;
+  --white: #ffffff;
+  --text-main: #0f1e4a;
+  --text-sub: #6b7ba4;
+  --green: #2ecc71;
+  --gold: #f0b429;
+  --red: #e74c3c;
+  --radius-card: 14px;
+  --radius-pill: 9999px;
+  --shadow-card: 0 2px 12px rgba(27, 47, 110, 0.07);
+}
+
+// Responsive breakpoints
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;

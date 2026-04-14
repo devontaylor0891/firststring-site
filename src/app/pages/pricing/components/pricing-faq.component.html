@@ -1,0 +1,31 @@
+<section class="faq section">
+  <div class="container">
+    <div class="faq__header">
+      <h2 class="faq__title">Frequently Asked Questions</h2>
+      <p class="faq__sub text-sub">
+        Still have questions? Email us at
+        <a href="mailto:hello@firststring.app" class="faq__email">hello@firststring.app</a>
+      </p>
+    </div>
+
+    <div class="faq__list">
+      @for (item of faqs; track item.question) {
+        <div class="faq__item" [class.faq__item--open]="item.open()">
+          <button
+            class="faq__question"
+            (click)="toggle(item)"
+            [attr.aria-expanded]="item.open()"
+          >
+            <span>{{ item.question }}</span>
+            <span class="faq__icon">{{ item.open() ? '−' : '+' }}</span>
+          </button>
+          @if (item.open()) {
+            <div class="faq__answer">
+              <p>{{ item.answer }}</p>
+            </div>
+          }
+        </div>
+      }
+    </div>
+  </div>
+</section>

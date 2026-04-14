@@ -1,0 +1,20 @@
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__logo">
+      <a routerLink="/" class="footer__logo-link">FIRST<span>STRING</span></a>
+      <p class="footer__tagline">Manage Your Team. Own the Season.</p>
+    </div>
+
+    <nav class="footer__nav">
+      <a routerLink="/" class="footer__link">Home</a>
+      <a routerLink="/features" class="footer__link">Features</a>
+      <a routerLink="/pricing" class="footer__link">Pricing</a>
+      <a routerLink="/contact" class="footer__link">Contact</a>
+    </nav>
+
+    <div class="footer__right">
+      <a [href]="'mailto:' + email" class="footer__email">{{ email }}</a>
+      <p class="footer__copy">&copy; {{ year }} FirstString. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

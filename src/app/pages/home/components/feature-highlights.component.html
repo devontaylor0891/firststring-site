@@ -1,0 +1,24 @@
+<section class="highlights section">
+  <div class="container">
+    <div class="highlights__header">
+      <h2 class="highlights__title">Less Admin. More Game.</h2>
+      <p class="highlights__sub text-sub">
+        Built for the coach with a day job. Set it up once, and FirstString runs your season on autopilot.
+      </p>
+    </div>
+
+    <div class="highlights__grid">
+      @for (feature of features; track feature.title) {
+        <div class="highlights__card">
+          <div class="highlights__icon">{{ feature.icon }}</div>
+          <h3 class="highlights__card-title">{{ feature.title }}</h3>
+          <p class="highlights__card-desc text-sub">{{ feature.description }}</p>
+        </div>
+      }
+    </div>
+
+    <div class="highlights__cta">
+      <a routerLink="/features" class="pill-btn pill-btn-secondary">See All Features</a>
+    </div>
+  </div>
+</section>

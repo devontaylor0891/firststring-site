@@ -1,0 +1,76 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
+}
+
+.pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  text-decoration: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  white-space: nowrap;
+
+  &:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.pill-btn-primary {
+  background-color: var(--green);
+  color: var(--white);
+  border-color: var(--green);
+}
+
+.pill-btn-secondary {
+  background-color: var(--surface);
+  color: var(--navy);
+  border-color: var(--navy);
+}
+
+.section {
+  padding: 80px 0;
+
+  @media (max-width: 768px) {
+    padding: 48px 0;
+  }
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 700;
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+// Full-width pill buttons when inside action groups on mobile
+@media (max-width: 768px) {
+  .btn-group,
+  .hero__actions {
+    .pill-btn {
+      width: 100%;
+    }
+  }
+}

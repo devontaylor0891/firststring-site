@@ -1,0 +1,51 @@
+<section class="hero">
+  <div class="container hero__content">
+    <h1 class="hero__headline">Managing your rec team shouldn't feel like a second job.<br /><span class="hero__headline-sub">FirstString makes it fun again.</span></h1>
+
+    <ol class="hero__steps">
+      <li class="hero__step">
+        <div class="hero__step-icon" aria-label="Foam finger — 1 finger">
+          <img src="finger-one.jpg" alt="Foam finger" class="hero__step-icon-img" />
+        </div>
+        <div class="hero__step-text">
+          <strong>Create your team &amp; add your players</strong>
+          <span>Create your team and set up your roster once — names, positions, contact info.</span>
+        </div>
+      </li>
+      <li class="hero__step">
+        <div class="hero__step-icon" aria-label="Foam finger — 2 fingers">
+          <img src="finger-one.jpg" alt="Foam finger" class="hero__step-icon-img" />
+        </div>
+        <div class="hero__step-text">
+          <strong>Add your schedule</strong>
+          <span>Build your season schedule in minutes and share it instantly.</span>
+        </div>
+      </li>
+      <li class="hero__step">
+        <div class="hero__step-icon" aria-label="Foam finger — 3 fingers">
+          <img src="finger-one.jpg" alt="Foam finger" class="hero__step-icon-img" />
+        </div>
+        <div class="hero__step-text">
+          <strong>Sit back &amp; enjoy the season</strong>
+          <span>Reminders go out, RSVPs come back, spots get filled — automatically.</span>
+        </div>
+      </li>
+    </ol>
+
+    <div class="hero__actions">
+      <button
+        class="pill-btn hero__btn hero__btn--primary"
+        (click)="scrollToSignup()"
+        >Sign Up for Free Early Access</button
+      >
+      <a routerLink="/pricing" class="pill-btn hero__btn hero__btn--outline"
+        >See Pricing</a
+      >
+    </div>
+  </div>
+  <div class="hero__wave">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="var(--surface)" />
+    </svg>
+  </div>
+</section>

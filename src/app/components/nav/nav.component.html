@@ -1,0 +1,56 @@
+<nav class="nav">
+  <div class="container nav__inner">
+    <a class="nav__logo" routerLink="/" (click)="closeMenu()">
+      FIRST<span>STRING</span>
+    </a>
+
+    <button
+      class="nav__hamburger"
+      [class.nav__hamburger--open]="menuOpen()"
+      (click)="toggleMenu()"
+      aria-label="Toggle navigation menu"
+      [attr.aria-expanded]="menuOpen()"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav__links" [class.nav__links--open]="menuOpen()">
+      <a
+        routerLink="/"
+        routerLinkActive="nav__link--active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="nav__link"
+        (click)="closeMenu()"
+        >Home</a
+      >
+      <a
+        routerLink="/features"
+        routerLinkActive="nav__link--active"
+        class="nav__link"
+        (click)="closeMenu()"
+        >Features</a
+      >
+      <a
+        routerLink="/pricing"
+        routerLinkActive="nav__link--active"
+        class="nav__link"
+        (click)="closeMenu()"
+        >Pricing</a
+      >
+      <a
+        routerLink="/contact"
+        routerLinkActive="nav__link--active"
+        class="nav__link"
+        (click)="closeMenu()"
+        >Contact</a
+      >
+      <a
+        class="pill-btn pill-btn-primary nav__cta"
+        (click)="scrollToSignup()"
+        >Sign Up for Free Early Access</a
+      >
+    </div>
+  </div>
+</nav>

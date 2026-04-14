@@ -1,0 +1,173 @@
+.early-access {
+  background: var(--navy);
+  padding: 80px 0;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__heading {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  &__sub {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 36px;
+    max-width: 480px;
+  }
+
+  // Override Brevo container
+  &__form-container {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    max-width: 560px !important;
+    width: 100%;
+  }
+
+  &__input-label {
+    display: block;
+    text-align: left;
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 6px;
+    padding-left: 4px;
+  }
+
+  &__input {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: var(--radius-pill) !important;
+    border: 2px solid rgba(255, 255, 255, 0.2) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: var(--white) !important;
+    font-family: 'Barlow', sans-serif !important;
+    font-size: 1rem !important;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.35) !important;
+      font-family: 'Barlow', sans-serif !important;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: var(--green) !important;
+      background: rgba(255, 255, 255, 0.12) !important;
+    }
+  }
+
+  &__submit-wrap {
+    margin-top: 16px;
+  }
+
+  &__btn {
+    width: 100%;
+    height: 48px;
+    padding: 0 28px;
+    background: var(--green) !important;
+    color: var(--white) !important;
+    font-family: 'Barlow', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    border: none !important;
+    border-radius: var(--radius-pill) !important;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.88;
+    }
+  }
+
+  &__success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 32px 0;
+    font-family: 'Barlow', sans-serif;
+  }
+
+  &__success-icon {
+    width: 48px;
+    height: 48px;
+    fill: var(--green);
+    margin-bottom: 4px;
+  }
+
+  &__success-msg {
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  &__share-prompt {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+  }
+
+  &__share-btns {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: var(--radius-pill);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    &--fb {
+      background: #1877f2;
+      color: #fff;
+    }
+
+    &--copy {
+      background: rgba(255, 255, 255, 0.12);
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+  }
+
+  &__share-icon {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    // Facebook icon is filled, not stroked
+    .early-access__share-btn--fb & {
+      fill: currentColor;
+      stroke: none;
+    }
+  }
+}

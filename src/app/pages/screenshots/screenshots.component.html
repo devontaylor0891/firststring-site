@@ -1,0 +1,43 @@
+<div class="screenshots-page">
+  <header class="screenshots-hero section">
+    <div class="container screenshots-hero__inner">
+      <div class="badge screenshots-hero__badge">Screenshots</div>
+      <h1 class="screenshots-hero__title">See It In Action</h1>
+      <p class="screenshots-hero__sub">
+        A look inside the FirstString app — clean, fast, and built for the field.
+      </p>
+    </div>
+  </header>
+
+  <section class="screenshots-grid section">
+    <div class="container">
+      <div class="screenshots-grid__items">
+        @for (s of screenshots; track s.number) {
+          <div class="screenshot-card">
+            <div class="screenshot-card__screen">
+              <div class="screenshot-card__notch"></div>
+              <div class="screenshot-card__content">
+                <span class="screenshot-card__label">Screenshot {{ s.number }}</span>
+                <span class="screenshot-card__sublabel">{{ s.label }}</span>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="screenshots-cta section">
+    <div class="container screenshots-cta__inner">
+      <h2 class="screenshots-cta__title">Want to see the real thing?</h2>
+      <p class="screenshots-cta__sub">
+        Join the beta and get hands-on access before public launch.
+      </p>
+      <a
+        routerLink="/"
+        class="pill-btn pill-btn-primary"
+        >Join the Beta</a
+      >
+    </div>
+  </section>
+</div>

@@ -1,0 +1,62 @@
+<section class="early-access" id="early-access">
+  <div class="container early-access__content">
+    <h2 class="early-access__heading">Be the first to play</h2>
+    <p class="early-access__sub">Sign up for free early access — we'll reach out as soon as FirstString is ready.</p>
+
+    <div class="sib-form">
+      <div id="sib-form-container" class="sib-form-container">
+
+
+        <div id="sib-container" class="sib-container--large sib-container--vertical early-access__form-container">
+          @if (submitted()) {
+            <div class="early-access__success">
+              <svg viewBox="0 0 512 512" class="early-access__success-icon">
+                <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+              </svg>
+              <p class="early-access__success-msg">You're on the list! We'll be in touch soon.</p>
+              <p class="early-access__share-prompt">Know someone else who manages a team? Spread the word.</p>
+              <div class="early-access__share-btns">
+                <button class="early-access__share-btn early-access__share-btn--fb" (click)="shareOnFacebook()">
+                  <svg viewBox="0 0 24 24" class="early-access__share-icon"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                  Share on Facebook
+                </button>
+                <button class="early-access__share-btn early-access__share-btn--copy" (click)="copyShareMessage()">
+                  <svg viewBox="0 0 24 24" class="early-access__share-icon"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  {{ copied() ? 'Copied!' : 'Copy message' }}
+                </button>
+              </div>
+            </div>
+          } @else {
+            <form id="sib-form" method="POST"
+              action="https://62ec1b70.sibforms.com/serve/MUIFAGPOSfhWt-qd5glApyKNRWog7LNYo9EHbzuPiW-SpwvtJ7uZQBIKx9NvWVMcYka3N3j2KAUAY3P0kOy3xKil3BI3I3vttIQrjSi4UXcmAl1fb4b55M1xyoGfNZ2ZDVVV4AIhXVFmEDbBUn5t3fy-T0QqkkkAHMBJll3d9I-Lzpt0nP1s2jbXqOThpDqcTMnl8RLDBQrjuw5c-A=="
+              target="brevo-iframe"
+              data-type="subscription"
+              (submit)="onSubmit()">
+
+              <div class="sib-input sib-form-block">
+                <div class="form__entry entry_block">
+                  <div class="form__label-row">
+                    <label class="early-access__input-label" for="EMAIL">Email address</label>
+                    <div class="entry__field">
+                      <input class="input early-access__input" type="text" id="EMAIL" name="EMAIL"
+                        autocomplete="email" placeholder="your@email.com" data-required="true" required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sib-form-block early-access__submit-wrap">
+                <button class="early-access__btn" type="submit">Get Early Access</button>
+              </div>
+
+              <input type="text" name="email_address_check" value="" class="input--hidden">
+              <input type="hidden" name="locale" value="en">
+            </form>
+            <iframe name="brevo-iframe" style="display:none" title="signup"></iframe>
+          }
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
