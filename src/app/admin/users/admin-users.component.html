@@ -1,0 +1,67 @@
+<div class="page-header">
+  <h1>Users</h1>
+  <p class="page-sub">{{ total() | number }} total users</p>
+</div>
+
+<div class="toolbar">
+  <input
+    class="search-input"
+    type="search"
+    placeholder="Search name or email…"
+    [(ngModel)]="search"
+    (input)="onSearch()"
+  />
+</div>
+
+@if (loading()) {
+  <div class="loading-state">Loading users…</div>
+} @else if (error()) {
+  <div class="error-state">{{ error() }}</div>
+} @else {
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Name / Email</th>
+          <th>Teams &amp; Role</th>
+          <th>Joined</th>
+          <th>Last Login</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (user of users(); track user.id) {
+          <tr>
+            <td class="cell-name">
+              <div class="user-name">{{ user.name }}</div>
+              <div class="user-email">{{ user.email }}</div>
+            </td>
+            <td class="cell-teams">
+              @if (user.teams.length === 0) {
+                <span class="no-teams">—</span>
+              } @else {
+                @for (t of user.teams; track t.teamId) {
+                  <div class="team-entry">
+                    <span class="team-name">{{ t.teamName }}</span>
+                    <span class="team-role">{{ t.roles.join(', ') }}</span>
+                  </div>
+                }
+              }
+            </td>
+            <td class="cell-date">{{ user.createdAt ? (user.createdAt | date:'MMM d, y') : '—' }}</td>
+            <td class="cell-date">{{ user.lastLogin ? (user.lastLogin | date:'MMM d, y') : '—' }}</td>
+          </tr>
+        }
+        @if (users().length === 0) {
+          <tr><td colspan="4" class="empty-row">No users found</td></tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pagination">
+    <span class="pagination-info">{{ (page - 1) * limit + 1 }}–{{ page * limit < total() ? page * limit : total() }} of {{ total() | number }}</span>
+    <button class="btn-page" [disabled]="page === 1" (click)="prevPage()">← Prev</button>
+    <span class="page-indicator">{{ page }} / {{ totalPages }}</span>
+    <button class="btn-page" [disabled]="page * limit >= total()" (click)="nextPage()">Next →</button>
+  </div>
+}

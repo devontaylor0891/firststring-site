@@ -1,0 +1,206 @@
+// Shared admin table/page styles — imported by each admin page component
+
+.page-header {
+  margin-bottom: 1.5rem;
+
+  h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0 0 0.25rem;
+  }
+
+  .page-sub {
+    font-size: 0.875rem;
+    color: var(--text-sub);
+    margin: 0;
+  }
+}
+
+.toolbar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+
+  .search-input {
+    flex: 1;
+    min-width: 180px;
+    padding: 0.5rem 0.875rem;
+    border: 1.5px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    color: var(--text-main);
+    background: white;
+
+    &:focus {
+      outline: none;
+      border-color: var(--navy);
+      box-shadow: 0 0 0 3px rgba(27, 47, 110, 0.08);
+    }
+  }
+
+  select {
+    padding: 0.5rem 0.75rem;
+    border: 1.5px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    color: var(--text-main);
+    background: white;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+      border-color: var(--navy);
+    }
+  }
+}
+
+.table-wrap {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+
+  thead {
+    border-bottom: 2px solid #f3f4f6;
+
+    th {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--text-sub);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+  }
+
+  tbody tr {
+    border-bottom: 1px solid #f9fafb;
+    transition: background 0.1s;
+
+    &:last-child { border-bottom: none; }
+    &:hover { background: #fafbff; }
+  }
+
+  td {
+    padding: 0.75rem 1rem;
+    color: var(--text-main);
+    vertical-align: middle;
+  }
+}
+
+.cell-name {
+  .user-name { font-weight: 600; }
+  .user-email { font-size: 0.78rem; color: var(--text-sub); margin-top: 1px; }
+}
+
+.cell-date {
+  color: var(--text-sub);
+  white-space: nowrap;
+  font-size: 0.82rem;
+}
+
+.cell-center { text-align: center; }
+
+.empty-row {
+  text-align: center;
+  color: var(--text-sub);
+  padding: 2rem !important;
+  font-size: 0.875rem;
+}
+
+// Badges
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+
+  &.badge-active   { background: #dcfce7; color: #15803d; }
+  &.badge-inactive { background: #fee2e2; color: #b91c1c; }
+  &.badge-neutral  { background: #f3f4f6; color: var(--text-sub); }
+}
+
+.badge-plan {
+  background: #f3f4f6;
+  color: var(--text-main);
+
+  &[data-plan="free"]   { background: #f3f4f6; color: var(--text-sub); }
+  &[data-plan="single"] { background: #dbeafe; color: #1d4ed8; }
+  &[data-plan="club"]   { background: #fef9c3; color: #a16207; }
+  &[data-plan="org"]    { background: #dcfce7; color: #15803d; }
+}
+
+.btn-row {
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1.5px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: border-color 0.1s, background 0.1s;
+  white-space: nowrap;
+
+  &:hover {
+    border-color: var(--navy);
+    background: #f8f9ff;
+  }
+}
+
+// Pagination
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  padding: 0.25rem 0 0.5rem;
+
+  .pagination-info { color: var(--text-sub); flex: 1; }
+
+  .btn-page {
+    padding: 0.4rem 0.875rem;
+    border: 1.5px solid #d1d5db;
+    border-radius: 7px;
+    background: white;
+    color: var(--text-main);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color 0.1s;
+
+    &:hover:not(:disabled) { border-color: var(--navy); }
+    &:disabled { opacity: 0.4; cursor: not-allowed; }
+  }
+
+  .page-indicator {
+    font-size: 0.8rem;
+    color: var(--text-sub);
+  }
+}
+
+.loading-state,
+.error-state {
+  padding: 3rem;
+  text-align: center;
+  color: var(--text-sub);
+  font-size: 0.9rem;
+}
+
+.error-state { color: #dc2626; }

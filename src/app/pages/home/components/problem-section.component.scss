@@ -1,0 +1,231 @@
+.problem {
+  background: #fff;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--text-main);
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+
+  &__body {
+    max-width: 640px;
+    margin: 0 auto 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text-sub);
+    }
+  }
+
+  &__statement {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.6rem !important;
+    font-weight: 700;
+    color: var(--text-main) !important;
+  }
+
+  &__mockup {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 24px;
+    align-items: stretch;
+    max-width: 860px;
+    margin: 0 auto 48px;
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+
+  &__mockup-vs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      background: rgba(27, 47, 110, 0.12);
+    }
+
+    @media (max-width: 640px) {
+      &::before {
+        top: 50%;
+        bottom: auto;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 1px;
+      }
+    }
+  }
+
+  &__mockup-vs-badge {
+    position: relative;
+    z-index: 1;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: #fff;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.06em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(27, 47, 110, 0.25);
+  }
+
+  &__mockup-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    &--bad { color: var(--red); }
+    &--good { color: var(--green); }
+  }
+
+  &__chat {
+    background: #fff;
+    border: 1px solid #e4e9f5;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 2px 16px rgba(27, 47, 110, 0.07);
+  }
+
+  &__chat-msg {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+
+    &--you {
+      align-items: flex-end;
+    }
+  }
+
+  &__chat-sender {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: var(--text-sub);
+  }
+
+  &__chat-bubble {
+    background: #f0f3fa;
+    border-radius: 12px 12px 12px 4px;
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    color: var(--text-main);
+    line-height: 1.5;
+    max-width: 92%;
+
+    &--you {
+      background: var(--navy);
+      color: #fff;
+      border-radius: 12px 12px 4px 12px;
+    }
+
+    &--silent {
+      color: var(--text-sub);
+      font-style: italic;
+    }
+  }
+
+  &__chat-time {
+    font-size: 0.65rem;
+    color: var(--text-sub);
+  }
+
+  &__notifications {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__notification {
+    background: #fff;
+    border: 1px solid #e4e9f5;
+    border-left: 3px solid var(--green);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    box-shadow: 0 2px 16px rgba(27, 47, 110, 0.07);
+
+    &--confirmed {
+      border-left-color: var(--gold);
+    }
+  }
+
+  &__notification-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__notification-app {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--text-main);
+  }
+
+  &__notification-auto {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--green);
+    color: #fff;
+    padding: 2px 7px;
+    border-radius: 9999px;
+  }
+
+  &__notification-body {
+    font-size: 0.85rem;
+    color: var(--text-sub);
+    line-height: 1.5;
+  }
+
+  &__notification-time {
+    font-size: 0.65rem;
+    color: var(--text-sub);
+  }
+
+  &__tagline {
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    color: var(--text-main);
+    font-style: italic;
+  }
+}

@@ -2,7 +2,26 @@
   "permissions": {
     "allow": [
       "Bash(gh auth:*)",
-      "Bash(gh --version)"
+      "Bash(gh --version)",
+      "Bash(gh repo:*)",
+      "Bash(node -e \"const a = require\\('./angular.json'\\); console.log\\(JSON.stringify\\(a.projects['firststring-site'].architect.build.options, null, 2\\)\\)\")",
+      "Bash(npx angular-cli-ghpages:*)",
+      "Bash(gh api:*)",
+      "Bash(MSYS_NO_PATHCONV=1 npm run build -- --base-href /firststring-site/)",
+      "Bash(xargs grep:*)",
+      "Bash(grep -v \"^\\\\s*$\\\\|{{\\\\|class\\\\|style\\\\|href\\\\|url\\\\|font\\\\|color\\\\|sans\\\\|woff\\\\|http\\\\|#\\\\|var\\\\|px\\\\|rem\")",
+      "Bash(ng serve *)",
+      "Bash(start cmd *)",
+      "Read(//c/c/Users/Admin/Desktop/firstString2025/**)",
+      "Bash(grep -E \"\\(component|page\\)\\\\.ts$\")",
+      "Bash(xargs -I {} basename {})",
+      "Bash(find /c/Users/Admin/Desktop/firststring-site/src/app -name \"*.ts\" -exec grep -l \"import.*Router\" {} \\\\;)",
+      "Bash(find /c/Users/Admin/Desktop/firststring-site/src/app -name \"*.html\" -exec grep -l \"sibforms\\\\|action=\" {} \\\\;)",
+      "Bash(grep -E \"\\\\.\\(ts|js\\)$\")"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\Admin\\.claude\\projects\\c--Users-Admin-Desktop-firststring-site\\memory",
+      "c:\\Users\\Admin\\Desktop\\firstString2025\\firstString2025"
     ]
   }
 }

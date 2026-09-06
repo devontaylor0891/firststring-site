@@ -10,5 +10,5 @@ import { RouterLink } from '@angular/router';
 })
 export class FooterComponent {
   readonly year = 2025;
-  readonly email = 'hello@firststring.app';
+  readonly email = 'devon@firststringapp.com';
 }

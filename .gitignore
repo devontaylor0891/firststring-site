@@ -41,3 +41,11 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Environment secrets
+.env
+
+# Generated / local environment config - use environment.example.ts as the template.
+# environment.prod.ts is written by set-env.js at build time from .env.
+/src/environments/environment.ts
+/src/environments/environment.prod.ts

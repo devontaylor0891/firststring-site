@@ -1,0 +1,20 @@
+<section class="how-it-works section">
+  <div class="container">
+    <div class="how-it-works__header">
+      <p class="section-label section-label--light">How It Works</p>
+      <h2 class="how-it-works__title">Automatic Callups That Happen While You Sleep</h2>
+    </div>
+
+    <div class="how-it-works__grid">
+      @for (step of steps; track step.number) {
+        <div class="how-it-works__step">
+          <div class="how-it-works__step-num">{{ step.number }}</div>
+          <div class="how-it-works__step-body">
+            <h3 class="how-it-works__step-title">{{ step.title }}</h3>
+            <p class="how-it-works__step-desc">{{ step.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

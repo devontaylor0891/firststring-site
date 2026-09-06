@@ -1,0 +1,29 @@
+<section class="comparison section">
+  <div class="container">
+    <div class="comparison__header">
+      <p class="section-label section-label--light">The Difference</p>
+      <h2 class="comparison__title">Built for Captains, Not Commissioners</h2>
+    </div>
+
+    <div class="comparison__wrap">
+      <table class="comparison__table">
+        <thead>
+          <tr>
+            <th class="comparison__th comparison__th--feature">Feature</th>
+            <th class="comparison__th comparison__th--fs">FirstString</th>
+            <th class="comparison__th comparison__th--other">Other Apps</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (row of rows; track row.feature) {
+            <tr class="comparison__row">
+              <td class="comparison__td comparison__td--feature">{{ row.feature }}</td>
+              <td class="comparison__td comparison__td--fs">{{ row.firststring }}</td>
+              <td class="comparison__td comparison__td--other">{{ row.other }}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

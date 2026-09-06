@@ -1,49 +1,11 @@
 <div class="features-page">
 
-  <!-- Hero with carousel -->
   <header class="features-hero section">
     <div class="container features-hero__inner">
       <h1 class="features-hero__title">Stop Organizing. Start Coaching.</h1>
-
-      <div class="carousel">
-        <!-- Slides -->
-        <div class="carousel__viewport">
-          <div class="carousel__track" [style.transform]="'translateX(-' + currentSlide() * 100 + '%)'">
-            @for (slide of slides; track slide.heading) {
-              <div class="carousel__slide">
-                <div class="carousel__slide-image">
-                  <span class="carousel__slide-icon">{{ slide.icon }}</span>
-                  <span class="carousel__slide-label">Screenshot Placeholder</span>
-                </div>
-                <div class="carousel__slide-text">
-                  <h3 class="carousel__slide-heading">{{ slide.heading }}</h3>
-                  <p class="carousel__slide-body">{{ slide.body }}</p>
-                </div>
-              </div>
-            }
-          </div>
-        </div>
-
-        <!-- Controls -->
-        <div class="carousel__controls">
-          <button class="carousel__arrow" (click)="prev()" aria-label="Previous slide">&#8249;</button>
-          <div class="carousel__dots">
-            @for (slide of slides; track slide.heading; let i = $index) {
-              <button
-                class="carousel__dot"
-                [class.carousel__dot--active]="currentSlide() === i"
-                (click)="goTo(i)"
-                [attr.aria-label]="'Go to slide ' + (i + 1)"
-              ></button>
-            }
-          </div>
-          <button class="carousel__arrow" (click)="next()" aria-label="Next slide">&#8250;</button>
-        </div>
-      </div>
     </div>
   </header>
 
-  <!-- Quick-nav cards -->
   <section class="features-nav section">
     <div class="container">
       <div class="features-nav__grid">
@@ -58,10 +20,9 @@
     </div>
   </section>
 
-  <!-- Feature detail rows -->
   <section class="features-list">
     @for (feature of features; track feature.id; let i = $index) {
-      <div class="feature-row" [class.feature-row--reverse]="i % 2 === 1" [id]="feature.id">
+      <div class="feature-row" [id]="feature.id">
         <div class="container">
           <div class="feature-row__inner">
             <div class="feature-row__text">
@@ -73,31 +34,20 @@
                 &#x2303; Back to top
               </button>
             </div>
-            <div class="feature-row__visual">
-              <div class="feature-row__placeholder">
-                <span class="feature-row__placeholder-icon">{{ feature.icon }}</span>
-                <span class="feature-row__placeholder-label">{{ feature.title }}</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     }
   </section>
 
-  <!-- Bottom CTA -->
   <section class="features-cta section">
     <div class="container features-cta__inner">
-      <h2 class="features-cta__title">Ready to run a better season?</h2>
+      <h2 class="features-cta__title">Ready to Fill Your Lineup?</h2>
       <p class="features-cta__sub text-sub">
-        Sign up now and get free early access — no credit card, no commitment.
+        FirstString is in beta. Join the list. Free during early access, no credit card required.
       </p>
       <div class="features-cta__actions">
-        <a
-          routerLink="/"
-          class="pill-btn pill-btn-primary"
-          >Sign Up for Free Early Access</a
-        >
+        <a routerLink="/" class="pill-btn pill-btn-primary">Get Early Access →</a>
         <a routerLink="/pricing" class="pill-btn pill-btn-secondary">View Pricing</a>
       </div>
     </div>

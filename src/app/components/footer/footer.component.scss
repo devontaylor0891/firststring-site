@@ -1,6 +1,6 @@
 .footer {
-  background: var(--navy-dark);
-  color: var(--white);
+  background: var(--surface);
+  color: var(--text-main);
   padding: 48px 0;
 
   @media (max-width: 768px) {
@@ -28,21 +28,20 @@
   }
 
   &__logo-link {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 1.4rem;
-    color: var(--white);
     text-decoration: none;
-    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+  }
 
-    span {
-      color: rgba(255, 255, 255, 0.5);
-    }
+  &__logo-img {
+    height: 28px;
+    width: auto;
+    display: block;
   }
 
   &__tagline {
     font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--text-sub);
   }
 
   &__nav {
@@ -60,12 +59,12 @@
 
   &__link {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--text-sub);
     text-decoration: none;
     transition: color 0.15s ease;
 
     &:hover {
-      color: var(--white);
+      color: var(--navy);
     }
   }
 
@@ -84,17 +83,17 @@
 
   &__email {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--text-sub);
     text-decoration: none;
     transition: color 0.15s ease;
 
     &:hover {
-      color: var(--white);
+      color: var(--navy);
     }
   }
 
   &__copy {
     font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.4);
+    color: var(--text-sub);
   }
 }

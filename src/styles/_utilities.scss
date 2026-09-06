@@ -53,6 +53,21 @@
   }
 }
 
+.section-label {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-sub);
+  margin-bottom: 12px;
+
+  &--light {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
 .badge {
   display: inline-flex;
   align-items: center;

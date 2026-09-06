@@ -1,0 +1,19 @@
+<section class="string-system section">
+  <div class="container">
+    <div class="string-system__header">
+      <p class="section-label">The String System</p>
+      <h2 class="string-system__title">Not Everyone Gets Called First. That's the Point.</h2>
+      <p class="string-system__intro">Every player on your team has a string. It's not about talent, it's about reliability and priority. Your lineup fills itself from the top down.</p>
+    </div>
+
+    <div class="string-system__tiers">
+      @for (tier of tiers; track tier.badge) {
+        <div class="string-system__tier" [ngClass]="'string-system__tier--' + tier.modifier">
+          <span class="string-system__badge">{{ tier.badge }}</span>
+          <h3 class="string-system__tier-title">{{ tier.title }}</h3>
+          <p class="string-system__tier-desc">{{ tier.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

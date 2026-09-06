@@ -1,0 +1,26 @@
+@use '../admin-shared' as *;
+
+.cell-teams {
+  .team-entry {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    line-height: 1.6;
+  }
+
+  .team-name {
+    font-weight: 500;
+    color: var(--text-main);
+    font-size: 0.875rem;
+  }
+
+  .team-role {
+    font-size: 0.75rem;
+    color: var(--text-sub);
+    text-transform: capitalize;
+
+    &::before { content: '·'; margin-right: 0.3rem; }
+  }
+
+  .no-teams { color: var(--text-sub); }
+}

@@ -1,0 +1,74 @@
+<div class="page-header">
+  <h1>Payments</h1>
+  <p class="page-sub">{{ total() | number }} transactions · <strong>{{ formatCurrency(totalRevenueCents()) }}</strong> matched</p>
+</div>
+
+<div class="toolbar">
+  <input
+    class="search-input"
+    type="search"
+    placeholder="Search by customer name or email…"
+    [(ngModel)]="search"
+    (input)="onSearch()"
+  />
+  <select [(ngModel)]="filterStatus" (change)="onFilter()">
+    <option value="">All statuses</option>
+    <option value="succeeded">Succeeded</option>
+    <option value="failed">Failed</option>
+    <option value="refunded">Refunded</option>
+  </select>
+</div>
+
+@if (loading()) {
+  <div class="loading-state">Loading payments…</div>
+} @else if (error()) {
+  <div class="error-state">{{ error() }}</div>
+} @else {
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Customer</th>
+          <th>Description</th>
+          <th>Amount</th>
+          <th>Status</th>
+          <th>Stripe ID</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (p of payments(); track p.id) {
+          <tr>
+            <td class="cell-name">
+              <div class="user-name">{{ p.userName }}</div>
+              <div class="user-email">{{ p.userEmail }}</div>
+            </td>
+            <td>{{ p.description }}</td>
+            <td class="cell-amount">{{ formatCurrency(p.amountCents) }}</td>
+            <td>
+              <span class="badge"
+                [class.badge-active]="p.status === 'succeeded'"
+                [class.badge-inactive]="p.status === 'failed'"
+                [class.badge-neutral]="p.status === 'refunded'"
+              >{{ p.status }}</span>
+            </td>
+            <td class="cell-stripe">
+              <span class="mono">{{ p.stripePaymentId }}</span>
+            </td>
+            <td class="cell-date">{{ p.createdAt | date:'MMM d, y' }}</td>
+          </tr>
+        }
+        @if (payments().length === 0) {
+          <tr><td colspan="6" class="empty-row">No payments found</td></tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <div class="pagination">
+    <span class="pagination-info">{{ (page - 1) * limit + 1 }}–{{ page * limit < total() ? page * limit : total() }} of {{ total() | number }}</span>
+    <button class="btn-page" [disabled]="page === 1" (click)="prevPage()">← Prev</button>
+    <span class="page-indicator">{{ page }} / {{ totalPages }}</span>
+    <button class="btn-page" [disabled]="page * limit >= total()" (click)="nextPage()">Next →</button>
+  </div>
+}

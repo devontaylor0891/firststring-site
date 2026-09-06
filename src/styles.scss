@@ -39,3 +39,8 @@ button {
   font-family: inherit;
   cursor: pointer;
 }
+
+// Brevo form input overrides
+#sib-container input.early-access__input {
+  background: rgba(255, 255, 255, 0.08) !important;
+}

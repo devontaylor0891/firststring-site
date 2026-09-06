@@ -1,0 +1,14 @@
+@use '../admin-shared' as *;
+
+.cell-amount {
+  font-weight: 700;
+  color: #16a34a;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.05rem;
+}
+
+.cell-stripe .mono {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: var(--text-sub);
+}

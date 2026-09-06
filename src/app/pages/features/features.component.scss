@@ -33,149 +33,6 @@
 
 }
 
-.carousel {
-  width: 100%;
-  max-width: 860px;
-  margin-top: 8px;
-
-  &__viewport {
-    overflow: hidden;
-    border-radius: var(--radius-card);
-  }
-
-  &__track {
-    display: flex;
-    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform;
-  }
-
-  &__slide {
-    flex-shrink: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    padding: 36px 40px;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius-card);
-    text-align: left;
-
-    @media (max-width: 640px) {
-      flex-direction: column;
-      text-align: center;
-      padding: 28px 24px;
-      gap: 24px;
-    }
-  }
-
-  &__slide-image {
-    flex-shrink: 0;
-    width: 220px;
-    aspect-ratio: 9 / 16;
-    background: var(--navy);
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-
-    @media (max-width: 640px) {
-      width: 120px;
-      aspect-ratio: 9 / 16;
-    }
-  }
-
-  &__slide-icon {
-    font-size: 2.4rem;
-    opacity: 0.5;
-  }
-
-  &__slide-label {
-    font-size: 0.72rem;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.3);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
-
-  &__slide-text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  &__slide-heading {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 700;
-    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
-    color: var(--white);
-    line-height: 1.15;
-  }
-
-  &__slide-body {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.65);
-    line-height: 1.7;
-
-    @media (max-width: 640px) {
-      font-size: 0.92rem;
-    }
-  }
-
-  &__controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-  }
-
-  &__arrow {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: var(--white);
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.4rem;
-    line-height: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s;
-
-    &:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
-  }
-
-  &__dots {
-    display: flex;
-    gap: 8px;
-  }
-
-  &__dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    border: none;
-    background: rgba(255, 255, 255, 0.25);
-    cursor: pointer;
-    padding: 0;
-    transition: background 0.2s, transform 0.2s;
-
-    &--active {
-      background: var(--gold);
-      transform: scale(1.3);
-    }
-  }
-}
 
 .features-nav {
   background: var(--white);
@@ -250,17 +107,11 @@
   }
 
   &__inner {
-    display: flex;
-    align-items: center;
-    gap: 64px;
-  }
-
-  &--reverse &__inner {
-    flex-direction: row-reverse;
+    max-width: 700px;
+    margin: 0 auto;
   }
 
   &__text {
-    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -292,7 +143,6 @@
   &__detail {
     font-size: 1rem;
     line-height: 1.7;
-    max-width: 480px;
     margin-top: 4px;
   }
 
@@ -318,65 +168,6 @@
     }
   }
 
-  &__visual {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__placeholder {
-    width: 100%;
-    max-width: 420px;
-    aspect-ratio: 16 / 10;
-    background: var(--navy);
-    border-radius: var(--radius-card);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    box-shadow: 0 8px 32px rgba(27, 47, 110, 0.15);
-  }
-
-  &__placeholder-icon {
-    font-size: 3rem;
-    opacity: 0.6;
-  }
-
-  &__placeholder-label {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.5);
-    letter-spacing: 0.04em;
-  }
-
-  @media (max-width: 768px) {
-    // Always show text first, then visual — overrides both normal and reverse layouts
-    &__inner {
-      flex-direction: column !important;
-      gap: 28px;
-    }
-
-    &__text {
-      order: 1;
-    }
-
-    &__visual {
-      order: 2;
-      width: 100%;
-    }
-
-    &__placeholder {
-      max-width: 100%;
-      aspect-ratio: 16 / 9;
-    }
-
-    &__detail {
-      max-width: 100%;
-    }
-  }
 }
 
 .features-cta {

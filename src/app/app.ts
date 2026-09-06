@@ -1,17 +1,28 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { RouterOutlet, Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavComponent, FooterComponent],
+  imports: [CommonModule, RouterOutlet, NavComponent, FooterComponent],
   template: `
-    <app-nav />
+    @if (!isAdminRoute()) {
+      <app-nav />
+    }
     <router-outlet />
-    <app-footer />
+    @if (!isAdminRoute()) {
+      <app-footer />
+    }
   `,
   styleUrl: './app.scss',
 })
-export class App {}
+export class App {
+  private router = inject(Router);
+
+  isAdminRoute(): boolean {
+    return this.router.url.startsWith('/admin');
+  }
+}

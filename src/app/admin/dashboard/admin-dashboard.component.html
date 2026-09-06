@@ -1,0 +1,93 @@
+<div class="page-header">
+  <h1>Dashboard</h1>
+  <p class="page-sub">Overview of FirstString accounts and activity</p>
+</div>
+
+@if (loading()) {
+  <div class="loading-state">Loading stats…</div>
+} @else if (error()) {
+  <div class="error-state">{{ error() }}</div>
+} @else if (stats(); as s) {
+
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-label">Users</div>
+      <div class="kpi-value">{{ s.kpis.totalUsers | number }}</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Teams</div>
+      <div class="kpi-value">{{ s.kpis.totalTeams | number }}</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Active Players</div>
+      <div class="kpi-value">{{ s.kpis.totalMembers | number }}</div>
+    </div>
+    <div class="kpi-card kpi-card--green">
+      <div class="kpi-label">Revenue</div>
+      <div class="kpi-value">{{ formatCurrency(s.kpis.totalRevenueCents) }}</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Beta Sign-ups</div>
+      <div class="kpi-value">{{ s.kpis.totalSignups | number }}</div>
+      <div class="kpi-sub">+{{ s.kpis.newSignupsThisMonth }} this month</div>
+    </div>
+  </div>
+
+  <div class="charts-grid">
+    <div class="chart-card">
+      <h3 class="chart-title">Revenue (last 6 months)</h3>
+      @if (s.revenueTrend.length === 0) {
+        <div class="chart-empty">No payment data yet</div>
+      } @else {
+        <div class="bar-chart">
+          @for (point of s.revenueTrend; track point.month) {
+            <div class="bar-col">
+              <div class="bar-tip">{{ formatCurrency(point.total) }}</div>
+              <div class="bar bar--navy" [style.height.%]="getBarHeight(point.total, getRevenueTrendMax())"></div>
+              <div class="bar-label">{{ formatMonth(point.month) }}</div>
+            </div>
+          }
+        </div>
+      }
+    </div>
+
+    <div class="chart-card">
+      <h3 class="chart-title">Sign-ups (last 30 days)</h3>
+      @if (s.signupTrend.length === 0) {
+        <div class="chart-empty">No sign-up data yet</div>
+      } @else {
+        <div class="bar-chart bar-chart--dense">
+          @for (point of s.signupTrend; track point.day) {
+            <div class="bar-col bar-col--narrow" [title]="point.day + ': ' + point.count">
+              <div class="bar bar--gold" [style.height.%]="getBarHeight(point.count, getSignupTrendMax())"></div>
+            </div>
+          }
+        </div>
+        <div class="dense-labels">
+          <span>{{ formatDay(s.signupTrend[0].day) }}</span>
+          <span>{{ formatDay(s.signupTrend[s.signupTrend.length - 1].day) }}</span>
+        </div>
+      }
+    </div>
+
+    <div class="chart-card quick-links">
+      <h3 class="chart-title">Quick Access</h3>
+      <a class="quick-link" routerLink="/admin/users">
+        <span>View all users</span>
+        <svg viewBox="0 0 20 20" fill="currentColor" width="14"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+      </a>
+      <a class="quick-link" routerLink="/admin/teams">
+        <span>View all teams</span>
+        <svg viewBox="0 0 20 20" fill="currentColor" width="14"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+      </a>
+      <a class="quick-link" routerLink="/admin/payments">
+        <span>View payments</span>
+        <svg viewBox="0 0 20 20" fill="currentColor" width="14"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+      </a>
+      <a class="quick-link" routerLink="/admin/signups">
+        <span>View sign-ups</span>
+        <svg viewBox="0 0 20 20" fill="currentColor" width="14"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+      </a>
+    </div>
+  </div>
+}

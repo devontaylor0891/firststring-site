@@ -1,0 +1,29 @@
+<section class="pull-quote">
+  <div class="container pull-quote__inner">
+    <blockquote class="pull-quote__text">
+      "Other apps give you a calendar and a roster. FirstString fills your lineup."
+    </blockquote>
+    <div class="pull-quote__share">
+      <p class="pull-quote__share-prompt">Know a captain dealing with the same problem?</p>
+      <div class="pull-quote__share-btns">
+        <button class="pull-quote__share-btn pull-quote__share-btn--fb" (click)="shareOnFacebook()">
+          <svg class="pull-quote__share-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+          Share on Facebook
+        </button>
+        <button class="pull-quote__share-btn pull-quote__share-btn--copy" (click)="copyShareMessage()">
+          <svg class="pull-quote__share-icon pull-quote__share-icon--stroke" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            @if (copied()) {
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+            } @else {
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            }
+          </svg>
+          {{ copied() ? 'Copied!' : 'Copy Message' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -16,16 +16,15 @@
   }
 
   &__logo {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--navy);
-    letter-spacing: 0.04em;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
 
-    span {
-      color: var(--text-sub);
-    }
+  &__logo-img {
+    height: 32px;
+    width: auto;
+    display: block;
   }
 
   &__links {

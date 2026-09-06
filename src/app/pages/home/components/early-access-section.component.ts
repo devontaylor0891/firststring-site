@@ -1,7 +1,8 @@
 import { Component, AfterViewInit, signal } from '@angular/core';
 
-const SITE_URL = 'https://firststringapp.com';
-const SHARE_MESSAGE = `I just signed up for early access to FirstString — a sports team management app that makes running your rec team actually fun. Roster, scheduling, reminders, RSVPs — all sorted. Check it out: ${SITE_URL}`;
+const FB_URL = 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffirststringapp.com';
+const SHARE_TEXT =
+  'I just joined the early access list for FirstString. Sports team management built for rec captains: roster, scheduling, automatic callups when someone drops, and more. Worth a look: https://firststringapp.com';
 
 @Component({
   selector: 'app-early-access-section',
@@ -10,7 +11,6 @@ const SHARE_MESSAGE = `I just signed up for early access to FirstString — a sp
   styleUrl: './early-access-section.component.scss',
 })
 export class EarlyAccessSectionComponent implements AfterViewInit {
-  submitted = signal(false);
   copied = signal(false);
 
   ngAfterViewInit(): void {
@@ -22,17 +22,12 @@ export class EarlyAccessSectionComponent implements AfterViewInit {
     }
   }
 
-  onSubmit(): void {
-    this.submitted.set(true);
-  }
-
   shareOnFacebook(): void {
-    const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(SITE_URL)}`;
-    window.open(url, '_blank', 'width=600,height=400');
+    window.open(FB_URL, '_blank', 'noopener,noreferrer,width=600,height=500');
   }
 
   copyShareMessage(): void {
-    navigator.clipboard.writeText(SHARE_MESSAGE).then(() => {
+    navigator.clipboard.writeText(SHARE_TEXT).then(() => {
       this.copied.set(true);
       setTimeout(() => this.copied.set(false), 2500);
     });
