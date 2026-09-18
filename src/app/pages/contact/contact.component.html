@@ -71,8 +71,19 @@
               }
             </div>
 
-            <button type="submit" class="pill-btn pill-btn-primary contact-form__submit">
-              Send Message
+            @if (error()) {
+              <p class="contact-form__error contact-form__error--send" role="alert">
+                Something went wrong sending your message. Please try again, or email us directly at
+                <a [href]="'mailto:' + email">{{ email }}</a>.
+              </p>
+            }
+
+            <button
+              type="submit"
+              class="pill-btn pill-btn-primary contact-form__submit"
+              [disabled]="sending()"
+            >
+              {{ sending() ? 'Sending…' : 'Send Message' }}
             </button>
           </form>
         }
@@ -80,7 +91,7 @@
 
       <div class="contact-info">
         <p class="contact-info__text">Or reach us directly at</p>
-        <a href="mailto:devon@firststringapp.com" class="contact-info__email">devon@firststringapp.com</a>
+        <a [href]="'mailto:' + email" class="contact-info__email">{{ email }}</a>
       </div>
     </div>
   </section>

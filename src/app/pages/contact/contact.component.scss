@@ -133,10 +133,23 @@
     margin: 0;
   }
 
+  &__error--send {
+    line-height: 1.5;
+
+    a {
+      color: inherit;
+    }
+  }
+
   &__submit {
     font-size: 1rem;
     padding: 14px 32px;
     align-self: flex-start;
+
+    &[disabled] {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
 
     @media (max-width: 480px) {
       align-self: stretch;

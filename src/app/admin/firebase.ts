@@ -1,9 +1,6 @@
-import { initializeApp, getApps } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
-import { getFirestore } from 'firebase/firestore';
-import { environment } from '../../environments/environment';
+import { app } from '../shared/firebase';
 
-const app = getApps().length === 0 ? initializeApp(environment.firebase) : getApps()[0];
+export { db } from '../shared/firebase';
 
 export const auth = getAuth(app);
-export const db = getFirestore(app);

@@ -28,6 +28,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'privacy',
+    loadComponent: () =>
+      import('./pages/privacy/privacy.component').then(
+        (m) => m.PrivacyComponent
+      ),
+  },
+  {
     path: 'admin',
     loadChildren: () => import('./admin/admin.routes').then(m => m.ADMIN_ROUTES),
   },

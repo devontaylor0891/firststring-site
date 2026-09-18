@@ -12,11 +12,19 @@
       <a routerLink="/features" class="footer__link">Features</a>
       <a routerLink="/pricing" class="footer__link">Pricing</a>
       <a routerLink="/contact" class="footer__link">Contact</a>
+      <a routerLink="/privacy" class="footer__link">Privacy</a>
     </nav>
 
     <div class="footer__right">
       <a [href]="'mailto:' + email" class="footer__email">{{ email }}</a>
-      <p class="footer__copy">&copy; {{ year }} FirstString. All rights reserved.</p>
+
+      <address class="footer__legal">
+        <span class="footer__legal-name">{{ legalName }}</span>
+        <span class="footer__legal-line">operating as {{ operatingName }}</span>
+        <span class="footer__legal-line">{{ address }}</span>
+      </address>
+
+      <p class="footer__copy">&copy; {{ year }} {{ legalName }}. All rights reserved.</p>
     </div>
   </div>
 </footer>

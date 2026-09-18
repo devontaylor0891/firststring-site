@@ -1,0 +1,621 @@
+<div class="privacy-page">
+  <header class="privacy-hero section">
+    <div class="container privacy-hero__inner">
+      <h1 class="privacy-hero__title">Privacy Policy</h1>
+      <p class="privacy-hero__sub">
+        FirstString is a tool for running a rec sports team. It is not an advertising business,
+        and this policy is written to be read, not to be skimmed past.
+      </p>
+      <p class="privacy-hero__dates">
+        Effective {{ effectiveDate }} &middot; Last updated {{ lastUpdated }}
+      </p>
+    </div>
+  </header>
+
+  <div class="container privacy-body">
+    <nav class="privacy-toc" aria-label="Table of contents">
+      <h2 class="privacy-toc__heading">On this page</h2>
+      <ol class="privacy-toc__list">
+        <li><a href="#summary">The short version</a></li>
+        <li><a href="#who-we-are">Who we are</a></li>
+        <li><a href="#what-we-collect">What we collect</a></li>
+        <li><a href="#how-we-use">How we use it</a></li>
+        <li><a href="#sharing">Who we share it with</a></li>
+        <li><a href="#visibility">What your teammates can see</a></li>
+        <li><a href="#contacts">Contacts and invitations</a></li>
+        <li><a href="#notifications">Push notifications, email and SMS</a></li>
+        <li><a href="#website">The website</a></li>
+        <li><a href="#retention">How long we keep things</a></li>
+        <li><a href="#data-deletion">Deleting your account and data</a></li>
+        <li><a href="#rights">Your privacy rights</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#transfers">Where your data lives</a></li>
+        <li><a href="#age">Age requirement</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </nav>
+
+    <article class="privacy-content">
+      <!-- ============================================================ -->
+      <section id="summary" class="privacy-section privacy-section--highlight">
+        <h2 class="privacy-section__title">The short version</h2>
+        <ul class="privacy-list">
+          <li>
+            We collect what we need to run your team: your name, a way to contact you, your
+            team membership, and your availability for games.
+          </li>
+          <li>
+            <strong>We do not sell your personal information</strong>, and we never have.
+          </li>
+          <li>
+            <strong>We do not run ads</strong> and we do not share your data with advertising
+            networks or data brokers.
+          </li>
+          <li>
+            <strong>We do not use analytics or tracking SDKs</strong> in the FirstString mobile
+            app. There is no third-party behavioural tracking inside the app.
+          </li>
+          <li>
+            <strong>We do not track your device location.</strong> The app never requests GPS
+            access. Any location in FirstString is a city or venue that you typed in and chose
+            yourself.
+          </li>
+          <li>
+            You can delete your account and your personal data at any time. See
+            <a href="#data-deletion">Deleting your account and data</a>.
+          </li>
+        </ul>
+        <p class="privacy-note">
+          This summary is here for convenience. The sections below are the actual terms.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="who-we-are" class="privacy-section">
+        <h2 class="privacy-section__title">1. Who we are</h2>
+        <p>
+          FirstString is a sports team management service operated by
+          <strong>{{ legalName }}</strong>, a federally incorporated Canadian company operating as
+          {{ operatingName }} and based in Saskatchewan, Canada ("FirstString", "we", "us", "our").
+        </p>
+        <p>
+          This policy covers the FirstString website at
+          <a href="https://firststringapp.com">firststringapp.com</a>, the FirstString web app at
+          <a href="https://app.firststringapp.com">app.firststringapp.com</a>, and the FirstString
+          mobile apps for Android and iOS (together, the "Service").
+        </p>
+        <p>
+          For the purposes of Canadian privacy law (PIPEDA) and, where it applies, the UK and EU
+          GDPR, FirstString is the data controller for the personal information described in this
+          policy. You can reach us at
+          <a [href]="'mailto:' + contactEmail">{{ contactEmail }}</a>.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="what-we-collect" class="privacy-section">
+        <h2 class="privacy-section__title">2. What we collect</h2>
+
+        <h3 class="privacy-section__sub">2.1 Information you give us</h3>
+        <p><strong>Account information.</strong> When you create an account we collect:</p>
+        <ul class="privacy-list">
+          <li>Your name (first and last, or a full name)</li>
+          <li>
+            Your email address and/or mobile phone number &mdash; at least one is required so your
+            team can reach you and so you can recover your account
+          </li>
+          <li>
+            A password, if you sign up with email and password. Passwords are handled by Google
+            Firebase Authentication and are stored as salted hashes. We never see or store your
+            password in readable form.
+          </li>
+          <li>Your time zone, so game times display correctly for you</li>
+          <li>A profile photo, if you choose to upload one</li>
+          <li>
+            Optionally, your home city or area, so managers can find local players. This is a place
+            you search for and select &mdash; we store the place name, formatted address, and its
+            coordinates. <strong>This is not your device's location.</strong>
+          </li>
+        </ul>
+
+        <p>
+          <strong>If you sign in with Google or Facebook</strong>, we receive your name, email
+          address, and profile photo from that provider so we can create your account. We do not
+          receive your password, your contact list, your friend list, or your posts, and we do not
+          post anything to those accounts.
+        </p>
+        <p>
+          <strong>If you sign in with Apple</strong>, we receive only what you agree to share. If you
+          choose "Hide My Email", Apple gives us a private relay address instead of your real one, and
+          we never see your actual email address. Apple sends your name only on your very first
+          sign-in, so if you decline to share it, we will ask you to enter a name yourself.
+        </p>
+
+        <p><strong>Team and player information.</strong> As you use the Service we store:</p>
+        <ul class="privacy-list">
+          <li>The teams you belong to, and your role on each (player, manager, assistant manager)</li>
+          <li>
+            Your roster placement (first, second, or third string), your positions, and your status
+            on the roster
+          </li>
+          <li>Your RSVPs, attendance, call-ups, waitlist position, and nudge history for games</li>
+          <li>Join requests you send to public teams, and invitations you send or receive</li>
+          <li>
+            Messages you send in team chat, including automated announcements sent on a manager's
+            behalf
+          </li>
+        </ul>
+
+        <p><strong>Team and game information created by managers.</strong> If you run a team, we store the team name, sport, logo, colours, roster settings, RSVP windows, and the schedule &mdash; including game times and venue locations you select.</p>
+
+        <h3 class="privacy-section__sub">2.2 Information collected automatically</h3>
+        <ul class="privacy-list">
+          <li>
+            <strong>Push notification tokens.</strong> If you enable notifications, we store a
+            Firebase Cloud Messaging token for each device so we can send you game reminders and
+            call-ups. Tokens are removed when you sign out or disable notifications.
+          </li>
+          <li>
+            <strong>Basic technical and security logs.</strong> Our infrastructure providers record
+            IP addresses, timestamps, device and browser type, and error diagnostics as part of
+            normal operation. We use these to keep the Service running, to debug problems, and to
+            detect abuse.
+          </li>
+        </ul>
+        <p>
+          The mobile app contains no advertising SDKs, no analytics SDKs, and no cross-app tracking
+          of any kind. We do not use the advertising identifier (IDFA or Android Advertising ID) and
+          we do not present App Tracking Transparency prompts because we do not track you.
+        </p>
+
+        <h3 class="privacy-section__sub">2.3 What we deliberately do not collect</h3>
+        <ul class="privacy-list">
+          <li>Precise or background device location (GPS)</li>
+          <li>Your date of birth</li>
+          <li>Financial or payment information &mdash; the Service is currently free and we do not process payments</li>
+          <li>Health, biometric, racial, religious, political, or other special-category data</li>
+          <li>Your device's full address book (see <a href="#contacts">Contacts and invitations</a>)</li>
+          <li>Photos or files from your device, other than a profile or team image you deliberately choose to upload</li>
+        </ul>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="how-we-use" class="privacy-section">
+        <h2 class="privacy-section__title">3. How we use it</h2>
+        <p>We use your information only to operate and improve the Service. Specifically:</p>
+        <ul class="privacy-list">
+          <li>To create and maintain your account and let you sign in</li>
+          <li>To show your team its roster, schedule, and who is available for each game</li>
+          <li>
+            To run the features you asked for &mdash; RSVPs, automatic call-ups when someone drops
+            out, waitlist promotion, reminders, and team messaging
+          </li>
+          <li>To deliver invitations by email or SMS when you invite someone to a team</li>
+          <li>To send you push notifications you have enabled</li>
+          <li>To respond when you contact us for support</li>
+          <li>To keep the Service secure, prevent abuse, and meet our legal obligations</li>
+        </ul>
+        <p>
+          <strong>We do not use your information for advertising, profiling, or automated
+          decision-making that produces legal or similarly significant effects.</strong>
+        </p>
+        <p>
+          Where the GDPR applies, our legal bases are: <em>performance of a contract</em> for
+          running your account and your team; <em>legitimate interests</em> for security, abuse
+          prevention, and support; <em>consent</em> for push notifications, contact access, and
+          marketing email, each of which you can withdraw at any time; and
+          <em>legal obligation</em> where the law requires us to retain or disclose information.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="sharing" class="privacy-section">
+        <h2 class="privacy-section__title">4. Who we share it with</h2>
+        <p>
+          <strong>We do not sell your personal information, and we do not share it for
+          cross-context behavioural advertising.</strong> We share data only in the situations
+          below.
+        </p>
+
+        <h3 class="privacy-section__sub">4.1 With your teams</h3>
+        <p>
+          FirstString is a shared team tool, so some of your information is visible to other members
+          of teams you join. See <a href="#visibility">What your teammates can see</a>.
+        </p>
+
+        <h3 class="privacy-section__sub">4.2 With service providers</h3>
+        <p>
+          We use a small number of vendors to run the Service. They process data on our
+          instructions and are not permitted to use it for their own purposes.
+        </p>
+        <div class="privacy-table-wrap">
+          <table class="privacy-table">
+            <thead>
+              <tr>
+                <th>Provider</th>
+                <th>What it does</th>
+                <th>What it handles</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Google Firebase (Google LLC / Google Cloud)</td>
+                <td>Authentication, database, file storage, push notifications, server functions, and web app hosting</td>
+                <td>Effectively all account, team, schedule, and message data</td>
+              </tr>
+              <tr>
+                <td>Google Maps Platform</td>
+                <td>Place search and autocomplete for home cities and game venues</td>
+                <td>The text you type into a location search</td>
+              </tr>
+              <tr>
+                <td>Resend</td>
+                <td>Delivers team invitation emails</td>
+                <td>Recipient email address and invitation contents</td>
+              </tr>
+              <tr>
+                <td>Twilio</td>
+                <td>Delivers team invitation text messages</td>
+                <td>Recipient phone number and invitation contents</td>
+              </tr>
+              <tr>
+                <td>Brevo</td>
+                <td>Early-access mailing list on our website only</td>
+                <td>Email address you submit to the signup form</td>
+              </tr>
+              <tr>
+                <td>DreamHost</td>
+                <td>Hosts the firststringapp.com marketing website</td>
+                <td>Standard web server logs</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="privacy-section__sub">4.3 For legal reasons</h3>
+        <p>
+          We may disclose information if we are required to by law, court order, or a valid legal
+          request, or where we believe in good faith that disclosure is necessary to protect the
+          rights, safety, or property of our users, the public, or FirstString.
+        </p>
+
+        <h3 class="privacy-section__sub">4.4 Business transfers</h3>
+        <p>
+          If FirstString is ever sold or transferred, your information may be transferred as part of
+          that transaction. We will notify you before your information becomes subject to a
+          materially different privacy policy.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="visibility" class="privacy-section">
+        <h2 class="privacy-section__title">5. What your teammates can see</h2>
+        <p>
+          This is the part people most often want to know, so it gets its own section.
+        </p>
+        <ul class="privacy-list">
+          <li>
+            <strong>Other members of your team</strong> can see your name, profile photo, roster
+            string, position, RSVP status and attendance history, and any messages you post in team
+            chat.
+          </li>
+          <li>
+            <strong>Your team manager</strong> can additionally see the email address and/or phone
+            number on your account, so they can reach you about games. Managers can also add, remove,
+            and change the roster status of members.
+          </li>
+          <li>
+            <strong>If a team is set to public</strong>, its name, sport, and general area are
+            discoverable by other FirstString users searching for teams to join. Your individual
+            membership details are not exposed in that search.
+          </li>
+          <li>
+            <strong>Your home city</strong>, if you set one, may be used to match you with nearby
+            public teams.
+          </li>
+        </ul>
+        <p>
+          Anything you post in team chat is visible to that team and is retained as part of the
+          team's history. Please treat it as you would any group message.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="contacts" class="privacy-section">
+        <h2 class="privacy-section__title">6. Contacts and invitations</h2>
+        <p>
+          The mobile app can help you invite someone by letting you pick a person from your device's
+          contacts, so you do not have to retype their phone number or email.
+        </p>
+        <p>This works in a deliberately narrow way:</p>
+        <ul class="privacy-list">
+          <li>The contact picker only opens when you tap to use it.</li>
+          <li>
+            <strong>We only ever receive the single contact you select</strong> &mdash; their name,
+            and one phone number or email address. Your address book is never read in bulk, uploaded,
+            scanned, or stored.
+          </li>
+          <li>
+            The details you select are used to prefill the invitation form. You can edit them before
+            sending.
+          </li>
+          <li>
+            Once sent, we store the invited person's name and contact detail as part of the pending
+            invitation so we can deliver it and so the manager can see who has been invited. The
+            invitation record is deleted when it is accepted, declined, revoked, or expires.
+          </li>
+          <li>
+            You can decline the contacts permission and still invite people by typing their details
+            in manually. Nothing else in the app depends on it.
+          </li>
+        </ul>
+        <p>
+          If you are invited to a team by someone else, we received your name and contact detail from
+          the person who invited you. If you would rather not be in our records, tell us at
+          <a [href]="'mailto:' + contactEmail">{{ contactEmail }}</a> and we will delete the
+          invitation.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="notifications" class="privacy-section">
+        <h2 class="privacy-section__title">7. Push notifications, email and SMS</h2>
+        <p>
+          <strong>Push notifications</strong> are optional and are used for game reminders, call-ups
+          when a spot opens, roster changes, and team messages. You can turn them off in your device
+          settings at any time.
+        </p>
+        <p>
+          <strong>Email and SMS</strong> are used for team invitations and essential account
+          messages such as password resets. Standard message and data rates may apply to text
+          messages. Invitation texts are one-off and transactional &mdash; we do not run SMS
+          marketing campaigns.
+        </p>
+        <p>
+          <strong>Marketing email</strong> is only sent to people who joined our early-access list on
+          the website. Every one of those emails has an unsubscribe link.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="website" class="privacy-section">
+        <h2 class="privacy-section__title">8. The website</h2>
+        <p>
+          The marketing site at firststringapp.com does not use Google Analytics, advertising pixels,
+          or any behavioural tracking. We do not set our own tracking cookies and there is no cookie
+          banner because there is nothing to consent to.
+        </p>
+        <p>Two things on the site are worth naming:</p>
+        <ul class="privacy-list">
+          <li>
+            <strong>The early-access signup form</strong> is hosted by Brevo and embedded in the
+            page. When you submit it, your email address goes to Brevo, and Brevo may set its own
+            cookies in that embedded frame. Brevo's privacy policy governs that processing.
+          </li>
+          <li>
+            <strong>The "Share on Facebook" buttons</strong> are plain links. They open a Facebook
+            share window only when you click one. No Facebook tracking pixel runs on our site.
+          </li>
+        </ul>
+        <p>
+          Our web host keeps standard server logs, including IP addresses, for security and
+          troubleshooting.
+        </p>
+        <p>
+          <strong>If you contact us</strong> &mdash; through the contact form, by email, or in an app
+          support request &mdash; we keep your message and contact details for as long as we need
+          them to answer you and to keep a record of the issue.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="retention" class="privacy-section">
+        <h2 class="privacy-section__title">9. How long we keep things</h2>
+        <ul class="privacy-list">
+          <li>
+            <strong>Account and profile data</strong> is kept while your account is active, and is
+            deleted when you delete your account.
+          </li>
+          <li>
+            <strong>Push notification tokens</strong> are deleted when you sign out, disable
+            notifications, or delete your account.
+          </li>
+          <li>
+            <strong>Pending invitations</strong> are deleted once accepted, declined, revoked, or
+            expired.
+          </li>
+          <li>
+            <strong>Team, game, and attendance records</strong> belong to the team. If you leave or
+            delete your account, your personal profile is removed, but the team's historical record
+            of a game may retain an anonymised entry so past results and counts stay intact.
+          </li>
+          <li>
+            <strong>Team chat messages</strong> remain visible to the team as part of its history,
+            in the same way an email you sent remains in the recipient's inbox. If you need specific
+            messages removed, contact us.
+          </li>
+          <li>
+            <strong>Marketing list subscriptions</strong> are kept until you unsubscribe.
+          </li>
+          <li>
+            <strong>Server and security logs</strong> are retained on a short rolling basis by our
+            infrastructure providers, typically no more than 30 to 60 days.
+          </li>
+        </ul>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="data-deletion" class="privacy-section privacy-section--highlight">
+        <h2 class="privacy-section__title">10. Deleting your account and data</h2>
+        <p>
+          You can ask us to delete your FirstString account and the personal information attached to
+          it at any time, and you do not need to have the app installed to do so.
+        </p>
+        <p><strong>In the app:</strong> go to Profile &rarr; Edit &rarr; Delete Account. You will be
+          shown exactly what will be removed, asked to confirm your sign-in, and asked to type
+          DELETE. Deletion then happens immediately and cannot be undone.
+        </p>
+        <p><strong>Without the app:</strong> email
+          <a [href]="'mailto:' + contactEmail + '?subject=Account%20deletion%20request'">{{ contactEmail }}</a>
+          from the email address on your account, with the subject line
+          "Account deletion request". If your account uses a phone number rather than an email
+          address, include that number so we can verify it is yours.
+        </p>
+        <p>Either way, here is what happens:</p>
+        <ul class="privacy-list">
+          <li>We verify the request is genuinely from you.</li>
+          <li>
+            We delete your account credentials, name, email address, phone number, profile photo,
+            time zone, home location, push notification tokens, team memberships, RSVPs, and pending
+            invitations.
+          </li>
+          <li>
+            Messages you posted in team chat and historical game records may be retained by the team
+            in anonymised form, so the team's own history is not corrupted. Tell us if you also want
+            your past messages removed and we will remove them.
+          </li>
+          <li>
+            We may retain a minimal record where the law requires it, or where we need it to resolve
+            a dispute or enforce our terms.
+          </li>
+          <li>
+            We complete deletion requests within 30 days and confirm by email when it is done.
+          </li>
+        </ul>
+        <p>
+          <strong>If you manage a team, deleting your account deletes that team</strong> along with
+          its roster, schedule, messages and invitations. The app names the affected teams before you
+          confirm. If you would rather hand a team to someone else, contact us before deleting and we
+          will transfer it.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="rights" class="privacy-section">
+        <h2 class="privacy-section__title">11. Your privacy rights</h2>
+        <p>
+          Wherever you live, you can ask us to give you a copy of your data, correct it, or delete
+          it. Email <a [href]="'mailto:' + contactEmail">{{ contactEmail }}</a> and we will respond
+          within 30 days. We will not charge you or treat you differently for exercising these
+          rights.
+        </p>
+
+        <h3 class="privacy-section__sub">11.1 Canada</h3>
+        <p>
+          Under PIPEDA you have the right to access the personal information we hold about you, to
+          challenge its accuracy, and to withdraw consent. If you are not satisfied with our
+          response, you may complain to the
+          <a href="https://www.priv.gc.ca" target="_blank" rel="noopener noreferrer">Office of the
+          Privacy Commissioner of Canada</a>.
+        </p>
+
+        <h3 class="privacy-section__sub">11.2 United Kingdom and European Economic Area</h3>
+        <p>
+          If the GDPR applies to you, you have the rights of access, rectification, erasure,
+          restriction of processing, data portability, and objection, and the right to withdraw
+          consent at any time without affecting processing already carried out. You also have the
+          right to lodge a complaint with your local supervisory authority.
+        </p>
+
+        <h3 class="privacy-section__sub">11.3 California and other US states</h3>
+        <p>
+          If you are a California resident, you have the right to know what personal information we
+          collect and how we use it, to request deletion or correction, and to not be discriminated
+          against for exercising those rights. <strong>We do not sell personal information and we do
+          not share it for cross-context behavioural advertising</strong>, so there is no
+          "Do Not Sell or Share My Personal Information" mechanism to offer. Residents of other US
+          states with comparable laws have equivalent rights, which we honour on the same terms.
+        </p>
+        <p>
+          You may use an authorised agent to make a request on your behalf. We will ask for proof of
+          authorisation and may still need to verify your identity directly.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="security" class="privacy-section">
+        <h2 class="privacy-section__title">12. Security</h2>
+        <p>
+          Your data is stored on Google Cloud infrastructure and is encrypted in transit and at rest.
+          Access to the database is governed by server-enforced security rules, so one team cannot
+          read another team's roster or messages. Passwords are hashed by Firebase Authentication and
+          are never visible to us. API credentials for our email and SMS providers are held in
+          managed secret storage.
+        </p>
+        <p>
+          No system is perfectly secure, and we cannot guarantee absolute security. If we become
+          aware of a breach affecting your personal information, we will notify you and the relevant
+          regulator as required by law.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="transfers" class="privacy-section">
+        <h2 class="privacy-section__title">13. Where your data lives</h2>
+        <p>
+          FirstString is operated from Canada, and our providers &mdash; Google, Resend, Twilio, and
+          Brevo &mdash; store and process data on servers in Canada, the United States, and
+          elsewhere. This means your information may be transferred outside your home country, and
+          may be accessible to courts and law enforcement in those countries under their local laws.
+        </p>
+        <p>
+          Where we transfer personal data out of the UK or EEA, we rely on the European Commission's
+          Standard Contractual Clauses or an equivalent safeguard offered by the provider.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="age" class="privacy-section">
+        <h2 class="privacy-section__title">14. Age requirement</h2>
+        <p>
+          <strong>FirstString is intended for people aged 16 and over.</strong> The Service is not
+          directed at children, and we do not knowingly collect personal information from anyone
+          under 16.
+        </p>
+        <p>
+          If a manager needs to track a player under 16 on a roster, that player should not create an
+          account. The manager remains responsible for any information they enter about that player,
+          and for having the right to enter it.
+        </p>
+        <p>
+          If you believe someone under 16 has created an account, contact
+          <a [href]="'mailto:' + contactEmail">{{ contactEmail }}</a> and we will delete the account
+          and its data promptly.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="changes" class="privacy-section">
+        <h2 class="privacy-section__title">15. Changes to this policy</h2>
+        <p>
+          We may update this policy as the Service changes. When we do, we will revise the
+          "Last updated" date at the top. If a change materially affects how we handle your personal
+          information, we will give you notice in the app or by email before it takes effect, so you
+          have a chance to review it.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="contact" class="privacy-section">
+        <h2 class="privacy-section__title">16. Contact us</h2>
+        <p>
+          Questions about this policy, or about your data, go to a real person:
+        </p>
+        <p class="privacy-contact">
+          <strong>{{ legalName }}</strong><br />
+          operating as {{ operatingName }}<br />
+          {{ address }}<br />
+          <a [href]="'mailto:' + contactEmail">{{ contactEmail }}</a>
+        </p>
+        <p>
+          We will acknowledge privacy requests within 30 days.
+        </p>
+      </section>
+
+      <p class="privacy-backlink">
+        <a routerLink="/">&larr; Back to FirstString</a>
+      </p>
+    </article>
+  </div>
+</div>

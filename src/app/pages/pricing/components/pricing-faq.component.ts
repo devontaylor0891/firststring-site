@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { COMPANY } from '../../../shared/constants';
 
 interface FaqItem {
   question: string;
@@ -14,6 +15,8 @@ interface FaqItem {
   styleUrl: './pricing-faq.component.scss',
 })
 export class PricingFaqComponent {
+  readonly email = COMPANY.email;
+
   faqs: FaqItem[] = [
     {
       question: 'Is there a free trial?',
