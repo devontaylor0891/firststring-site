@@ -193,6 +193,14 @@
     }
   }
 
+  /* Carrier-mandated wording. Called out so a reviewer scanning for it finds it. */
+  .#{$p}-sms-carveout {
+    background: var(--surface);
+    border-left: 4px solid var(--green);
+    border-radius: 0 var(--radius-card) var(--radius-card) 0;
+    padding: 16px 20px;
+  }
+
   .#{$p}-note {
     font-size: 0.9rem;
     color: var(--text-sub);
