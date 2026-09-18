@@ -1,0 +1,4 @@
+@use '../../../styles/legal-page' as *;
+
+// Shared chrome with the privacy policy; see styles/_legal-page.scss.
+@include legal-page('terms');

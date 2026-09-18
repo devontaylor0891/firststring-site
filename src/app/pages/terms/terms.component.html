@@ -1,0 +1,405 @@
+<div class="terms-page">
+  <header class="terms-hero section">
+    <div class="container terms-hero__inner">
+      <h1 class="terms-hero__title">Terms of Service</h1>
+      <p class="terms-hero__sub">
+        The rules for using FirstString. Written plainly, because terms nobody reads protect
+        nobody.
+      </p>
+      <p class="terms-hero__dates">
+        Effective {{ effectiveDate }} &middot; Last updated {{ lastUpdated }}
+      </p>
+    </div>
+  </header>
+
+  <div class="container terms-body">
+    <nav class="terms-toc" aria-label="Table of contents">
+      <h2 class="terms-toc__heading">On this page</h2>
+      <ol class="terms-toc__list">
+        <li><a href="#summary">The short version</a></li>
+        <li><a href="#who-we-are">Who you are agreeing with</a></li>
+        <li><a href="#eligibility">Who can use FirstString</a></li>
+        <li><a href="#accounts">Your account</a></li>
+        <li><a href="#teams">Teams, managers and rosters</a></li>
+        <li><a href="#conduct">Acceptable use and objectionable content</a></li>
+        <li><a href="#moderation">Reporting, blocking and enforcement</a></li>
+        <li><a href="#content">Content you post</a></li>
+        <li><a href="#invitations">Inviting other people</a></li>
+        <li><a href="#payment">Beta access, pricing and renewals</a></li>
+        <li><a href="#cancellation">Cancelling and deleting your account</a></li>
+        <li><a href="#availability">Availability and changes to the Service</a></li>
+        <li><a href="#warranty">Disclaimer of warranties</a></li>
+        <li><a href="#liability">Limitation of liability</a></li>
+        <li><a href="#law">Governing law</a></li>
+        <li><a href="#changes">Changes to these terms</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </nav>
+
+    <article class="terms-content">
+      <!-- ============================================================ -->
+      <section id="summary" class="terms-section terms-section--highlight">
+        <h2 class="terms-section__title">The short version</h2>
+        <ul class="terms-list">
+          <li>You must be at least {{ minimumAge }} to use FirstString.</li>
+          <li>
+            <strong>There is zero tolerance for objectionable content or abusive behaviour.</strong>
+            Harassment, hate, threats and sexual content aimed at anyone are grounds for immediate
+            removal.
+          </li>
+          <li>
+            You can report content or people, and block a user, from inside the app. We review
+            reports within 24 hours.
+          </li>
+          <li>You own what you post. You give us only the permission we need to run the Service.</li>
+          <li>
+            FirstString is in beta and free during early access. We will tell you before that
+            changes.
+          </li>
+          <li>You can delete your account at any time, from inside the app.</li>
+        </ul>
+        <p class="terms-note">
+          This summary is for orientation only. The sections below are the actual agreement.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="who-we-are" class="terms-section">
+        <h2 class="terms-section__title">1. Who you are agreeing with</h2>
+        <p>
+          FirstString is operated by <strong>{{ legalName }}</strong>, a federally incorporated
+          Canadian company operating as {{ operatingName }} ("FirstString", "we", "us", "our").
+        </p>
+        <p>
+          These terms govern your use of the FirstString website at
+          <a href="https://firststringapp.com">firststringapp.com</a>, the FirstString web app at
+          <a href="https://app.firststringapp.com">app.firststringapp.com</a>, and the FirstString
+          mobile apps for Android and iOS (together, the "Service").
+        </p>
+        <p>
+          By creating an account or using the Service, you agree to these terms. If you do not
+          agree, please do not use the Service. Our
+          <a routerLink="/privacy">Privacy Policy</a> explains what we do with your information and
+          forms part of this agreement.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="eligibility" class="terms-section">
+        <h2 class="terms-section__title">2. Who can use FirstString</h2>
+        <p>
+          You must be <strong>at least {{ minimumAge }} years old</strong> to create an account or
+          use the Service. FirstString is built for adult recreational sports teams and is not
+          directed at children.
+        </p>
+        <p>
+          If we learn that an account belongs to someone under {{ minimumAge }}, we will close it
+          and delete the associated data. If you believe a child has created an account, email us
+          at <a [href]="'mailto:' + contactEmail">{{ contactEmail }}</a>.
+        </p>
+        <p>
+          You must also be able to form a binding contract, and you must not be barred from using
+          the Service under the laws that apply to you.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="accounts" class="terms-section">
+        <h2 class="terms-section__title">3. Your account</h2>
+        <p>
+          You are responsible for what happens under your account, including keeping your sign-in
+          credentials secure. Tell us promptly at
+          <a [href]="'mailto:' + contactEmail">{{ contactEmail }}</a> if you think someone else has
+          gained access to it.
+        </p>
+        <p>
+          Give us accurate information when you sign up, and keep it current. Do not impersonate
+          another person, and do not create an account on someone's behalf without their
+          permission.
+        </p>
+        <p>
+          One account is for one person. Do not share an account with someone else or transfer it
+          without asking us first.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="teams" class="terms-section">
+        <h2 class="terms-section__title">4. Teams, managers and rosters</h2>
+        <p>
+          FirstString organises people into teams. A team has one or more managers, who can invite
+          and remove members, edit the schedule, and manage the roster.
+        </p>
+        <p>
+          If you are a team manager, you are responsible for who you add to your team and for the
+          information you enter about other people. Only add someone's contact details when you
+          have their permission to do so.
+        </p>
+        <p>
+          Managers can remove a member from a team at any time. Removal from a team does not delete
+          that person's FirstString account.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="conduct" class="terms-section terms-section--highlight">
+        <h2 class="terms-section__title">5. Acceptable use and objectionable content</h2>
+        <p>
+          <strong>
+            We have zero tolerance for objectionable content and for abusive behaviour toward other
+            users.
+          </strong>
+          Team chat and member profiles are shared spaces, and everyone is entitled to use them
+          without being harassed.
+        </p>
+        <p>You may not use the Service to:</p>
+        <ul class="terms-list">
+          <li>harass, bully, threaten, stalk or intimidate anyone, or encourage others to do so;</li>
+          <li>
+            post content that is hateful or discriminatory on the basis of race, ethnicity,
+            national origin, religion, sex, gender identity, sexual orientation, disability, age or
+            any similar ground;
+          </li>
+          <li>post sexually explicit material, or any sexual content involving a minor;</li>
+          <li>post content that is violent, graphic, or that glorifies violence or self-harm;</li>
+          <li>post spam, scams, chain messages or unsolicited advertising;</li>
+          <li>impersonate another person or misrepresent your affiliation with anyone;</li>
+          <li>share someone else's private information without their permission;</li>
+          <li>
+            upload malware, attempt to breach or probe the Service's security, scrape it, or use it
+            through automated means we have not authorised;
+          </li>
+          <li>break any law that applies to you, or use the Service to help someone else do so.</li>
+        </ul>
+        <p>
+          This list describes the kinds of things that are not allowed; it is not exhaustive. We
+          may act on behaviour that is plainly abusive even if it is not itemised above.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="moderation" class="terms-section">
+        <h2 class="terms-section__title">6. Reporting, blocking and enforcement</h2>
+        <p>
+          If you see content or behaviour that breaks section 5, report it from inside the app.
+          Every report reaches a real person.
+        </p>
+        <ul class="terms-list">
+          <li><strong>Report:</strong> you can report a message or a team member from the app.</li>
+          <li>
+            <strong>Block:</strong> you can block another user, which hides their messages from
+            you.
+          </li>
+          <li>
+            <strong>Manager removal:</strong> a team manager can delete a message from their team's
+            chat and remove a member from the team.
+          </li>
+        </ul>
+        <p>
+          <strong>We review reports within 24 hours.</strong> When content or conduct breaks these
+          terms we may remove the content, warn the person responsible, remove them from a team,
+          suspend their account, or terminate it — without notice where the behaviour is serious.
+          We may also preserve and disclose information where the law requires it, or where someone
+          appears to be at risk of harm.
+        </p>
+        <p>
+          If we terminate your account for a breach of these terms, you may not create a new one
+          without our permission.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="content" class="terms-section">
+        <h2 class="terms-section__title">7. Content you post</h2>
+        <p>
+          You keep ownership of the content you post to FirstString — your messages, your team and
+          game details, your profile.
+        </p>
+        <p>
+          You grant us a non-exclusive, worldwide, royalty-free licence to host, store, reproduce
+          and display that content <strong>solely for the purpose of operating the Service</strong>
+          for you and the teammates you share it with. We do not sell your content, use it for
+          advertising, or use it to train machine-learning models.
+        </p>
+        <p>
+          That licence lasts as long as the content is on the Service. When you delete content, or
+          delete your account, the licence ends for what was deleted, other than copies we are
+          required to keep or that remain temporarily in routine backups.
+        </p>
+        <p>
+          You are responsible for the content you post, and you confirm you have the right to post
+          it.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="invitations" class="terms-section">
+        <h2 class="terms-section__title">8. Inviting other people</h2>
+        <p>
+          FirstString lets managers invite players by email or text message. If you send an
+          invitation, you confirm that you know the person and that they have agreed to hear from
+          you about the team.
+        </p>
+        <p>
+          An invitation is a one-time, transactional message. We do not send marketing messages to
+          invited players, and invitation details are not shared with third parties for marketing
+          or promotional purposes.
+        </p>
+        <p>
+          Do not use invitations to reach people who have not agreed to be contacted. We may
+          suspend accounts that do.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="payment" class="terms-section">
+        <h2 class="terms-section__title">9. Beta access, pricing and renewals</h2>
+        <p>
+          FirstString is currently in <strong>beta and free to use</strong> during early access. We
+          will give you notice before your team is asked to pay for anything.
+        </p>
+        <p>
+          When paid subscriptions begin, a subscription covers <strong>one team</strong> for a
+          season of one year. If you run more than one team, each team needs its own subscription.
+          The current price is shown on our <a routerLink="/pricing">pricing page</a>.
+        </p>
+        <p>
+          When a subscription lapses, the team moves to <strong>read-only</strong>: you and your
+          members keep access to the roster, schedule and history, but cannot make changes or send
+          new messages until it is renewed. We do not delete a team for non-payment.
+        </p>
+        <p>
+          Purchases made through the Apple App Store or Google Play are also governed by that
+          store's terms, and refunds for them are handled by the store under its own policy.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="cancellation" class="terms-section">
+        <h2 class="terms-section__title">10. Cancelling and deleting your account</h2>
+        <p>
+          You can delete your account at any time from inside the app. Deleting your account
+          removes your profile, your team memberships, your availability responses and your
+          messages, as described in our <a routerLink="/privacy">Privacy Policy</a>. It cannot be
+          undone.
+        </p>
+        <p>
+          If you are the only manager of a team, deleting your account affects that team — the app
+          will tell you what will happen before you confirm.
+        </p>
+        <p>
+          We may suspend or close an account that breaks these terms, as described in section 6. We
+          may also close an account that has been inactive for a long period, after telling you
+          first.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="availability" class="terms-section">
+        <h2 class="terms-section__title">11. Availability and changes to the Service</h2>
+        <p>
+          We work to keep FirstString running, but we do not promise it will be available without
+          interruption. The Service depends on third parties — including hosting, push
+          notification, email and messaging providers — and those can fail.
+        </p>
+        <p>
+          <strong>Do not rely on FirstString as your only record of anything that matters.</strong>
+          Notifications and reminders can be delayed or fail to arrive, and a missed notification
+          is not our responsibility.
+        </p>
+        <p>
+          We may add, change or remove features. If we discontinue the Service or a paid feature
+          you are using, we will give you reasonable notice and a way to export or retain the
+          information that matters to you.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="warranty" class="terms-section">
+        <h2 class="terms-section__title">12. Disclaimer of warranties</h2>
+        <p>
+          The Service is provided <strong>"as is" and "as available"</strong>, without warranties
+          of any kind, whether express, implied or statutory, including any implied warranties of
+          merchantability, fitness for a particular purpose and non-infringement.
+        </p>
+        <p>
+          We do not warrant that the Service will be uninterrupted, timely, secure or error-free,
+          or that any defect will be corrected.
+        </p>
+        <p class="terms-note">
+          Some jurisdictions do not allow the exclusion of certain warranties. Where that is the
+          case, the exclusions above apply only to the extent the law permits, and you may have
+          rights that these terms cannot limit.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="liability" class="terms-section">
+        <h2 class="terms-section__title">13. Limitation of liability</h2>
+        <p>
+          To the fullest extent the law allows, FirstString will not be liable for any indirect,
+          incidental, special, consequential or punitive damages, or for any loss of profits,
+          revenue, data or goodwill, arising out of or relating to your use of the Service.
+        </p>
+        <p>
+          Our total liability for all claims relating to the Service is limited to the greater of
+          <strong>the amount you paid us in the twelve months before the claim arose</strong>, or
+          <strong>fifty Canadian dollars (CAD $50)</strong>.
+        </p>
+        <p>
+          Nothing in these terms limits liability that cannot be limited by law, including
+          liability for death or personal injury caused by negligence, or for fraud.
+        </p>
+        <p class="terms-note">
+          Some jurisdictions do not allow these limitations. Where that is the case, they apply
+          only to the extent the law permits.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="law" class="terms-section">
+        <h2 class="terms-section__title">14. Governing law</h2>
+        <p>
+          These terms are governed by the laws of the Province of Saskatchewan and the federal laws
+          of Canada that apply there, without regard to conflict-of-laws rules. The courts of
+          Saskatchewan have jurisdiction over any dispute, and you and we both agree to that.
+        </p>
+        <p>
+          If you are a consumer, this does not deprive you of the protection of the mandatory laws
+          of the country where you live.
+        </p>
+        <p>If any part of these terms is found unenforceable, the rest stays in effect.</p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="changes" class="terms-section">
+        <h2 class="terms-section__title">15. Changes to these terms</h2>
+        <p>
+          We may update these terms as the Service changes. When we do, we will update the "last
+          updated" date at the top of this page.
+        </p>
+        <p>
+          If a change materially affects your rights — for example a change to pricing or to how we
+          handle your content — we will tell you in the app or by email before it takes effect.
+          Continuing to use the Service after that means you accept the updated terms.
+        </p>
+      </section>
+
+      <!-- ============================================================ -->
+      <section id="contact" class="terms-section">
+        <h2 class="terms-section__title">16. Contact us</h2>
+        <p>Questions about these terms, or a report you want to escalate, go to a real person:</p>
+        <p class="terms-contact">
+          <strong>{{ legalName }}</strong><br />
+          operating as {{ operatingName }}<br />
+          {{ address }}<br />
+          <a [href]="'mailto:' + contactEmail">{{ contactEmail }}</a>
+        </p>
+      </section>
+
+      <p class="terms-backlink">
+        <a routerLink="/">&larr; Back to FirstString</a>
+      </p>
+    </article>
+  </div>
+</div>
