@@ -16,23 +16,23 @@
     <nav class="privacy-toc" aria-label="Table of contents">
       <h2 class="privacy-toc__heading">On this page</h2>
       <ol class="privacy-toc__list">
-        <li><a href="#summary">The short version</a></li>
-        <li><a href="#who-we-are">Who we are</a></li>
-        <li><a href="#what-we-collect">What we collect</a></li>
-        <li><a href="#how-we-use">How we use it</a></li>
-        <li><a href="#sharing">Who we share it with</a></li>
-        <li><a href="#visibility">What your teammates can see</a></li>
-        <li><a href="#contacts">Contacts and invitations</a></li>
-        <li><a href="#notifications">Push notifications, email and SMS</a></li>
-        <li><a href="#website">The website</a></li>
-        <li><a href="#retention">How long we keep things</a></li>
-        <li><a href="#data-deletion">Deleting your account and data</a></li>
-        <li><a href="#rights">Your privacy rights</a></li>
-        <li><a href="#security">Security</a></li>
-        <li><a href="#transfers">Where your data lives</a></li>
-        <li><a href="#age">Age requirement</a></li>
-        <li><a href="#changes">Changes to this policy</a></li>
-        <li><a href="#contact">Contact us</a></li>
+        <li><a routerLink="/privacy" fragment="summary">The short version</a></li>
+        <li><a routerLink="/privacy" fragment="who-we-are">Who we are</a></li>
+        <li><a routerLink="/privacy" fragment="what-we-collect">What we collect</a></li>
+        <li><a routerLink="/privacy" fragment="how-we-use">How we use it</a></li>
+        <li><a routerLink="/privacy" fragment="sharing">Who we share it with</a></li>
+        <li><a routerLink="/privacy" fragment="visibility">What your teammates can see</a></li>
+        <li><a routerLink="/privacy" fragment="contacts">Contacts and invitations</a></li>
+        <li><a routerLink="/privacy" fragment="notifications">Push notifications and email</a></li>
+        <li><a routerLink="/privacy" fragment="website">The website</a></li>
+        <li><a routerLink="/privacy" fragment="retention">How long we keep things</a></li>
+        <li><a routerLink="/privacy" fragment="data-deletion">Deleting your account and data</a></li>
+        <li><a routerLink="/privacy" fragment="rights">Your privacy rights</a></li>
+        <li><a routerLink="/privacy" fragment="security">Security</a></li>
+        <li><a routerLink="/privacy" fragment="transfers">Where your data lives</a></li>
+        <li><a routerLink="/privacy" fragment="age">Age requirement</a></li>
+        <li><a routerLink="/privacy" fragment="changes">Changes to this policy</a></li>
+        <li><a routerLink="/privacy" fragment="contact">Contact us</a></li>
       </ol>
     </nav>
 
@@ -63,7 +63,7 @@
           </li>
           <li>
             You can delete your account and your personal data at any time. See
-            <a href="#data-deletion">Deleting your account and data</a>.
+            <a routerLink="/privacy" fragment="data-deletion">Deleting your account and data</a>.
           </li>
         </ul>
         <p class="privacy-note">
@@ -120,10 +120,9 @@
         </ul>
 
         <p>
-          <strong>If you sign in with Google or Facebook</strong>, we receive your name, email
-          address, and profile photo from that provider so we can create your account. We do not
-          receive your password, your contact list, your friend list, or your posts, and we do not
-          post anything to those accounts.
+          <strong>If you sign in with Google</strong>, we receive your name, email address, and
+          profile photo from Google so we can create your account. We do not receive your password
+          or your contact list, and we do not post anything to your account.
         </p>
         <p>
           <strong>If you sign in with Apple</strong>, we receive only what you agree to share. If you
@@ -144,6 +143,18 @@
           <li>
             Messages you send in team chat, including automated announcements sent on a manager's
             behalf
+          </li>
+          <li>
+            <strong>Reports you make about a message or a person</strong>, and reports made about
+            you. A report records the message complained about, who filed it, who it concerns, the
+            reason given, and the team it happened on. We receive a copy by email so we can act on
+            it. Reports cannot be read back by anyone in the app, including the person who filed
+            one.
+          </li>
+          <li>
+            <strong>People you have blocked.</strong> Blocking is stored on your own account so it
+            follows you to a new device. It hides that person's messages from you only &mdash; they
+            are not told, and nobody else's view changes.
           </li>
         </ul>
 
@@ -175,7 +186,7 @@
           <li>Your date of birth</li>
           <li>Financial or payment information &mdash; the Service is currently free and we do not process payments</li>
           <li>Health, biometric, racial, religious, political, or other special-category data</li>
-          <li>Your device's full address book (see <a href="#contacts">Contacts and invitations</a>)</li>
+          <li>Your device's full address book (see <a routerLink="/privacy" fragment="contacts">Contacts and invitations</a>)</li>
           <li>Photos or files from your device, other than a profile or team image you deliberately choose to upload</li>
         </ul>
       </section>
@@ -191,7 +202,7 @@
             To run the features you asked for &mdash; RSVPs, automatic call-ups when someone drops
             out, waitlist promotion, reminders, and team messaging
           </li>
-          <li>To deliver invitations by email or SMS when you invite someone to a team</li>
+          <li>To deliver invitations by email when you invite someone to a team</li>
           <li>To send you push notifications you have enabled</li>
           <li>To respond when you contact us for support</li>
           <li>To keep the Service secure, prevent abuse, and meet our legal obligations</li>
@@ -221,7 +232,7 @@
         <h3 class="privacy-section__sub">4.1 With your teams</h3>
         <p>
           FirstString is a shared team tool, so some of your information is visible to other members
-          of teams you join. See <a href="#visibility">What your teammates can see</a>.
+          of teams you join. See <a routerLink="/privacy" fragment="visibility">What your teammates can see</a>.
         </p>
 
         <h3 class="privacy-section__sub">4.2 With service providers</h3>
@@ -255,11 +266,6 @@
                 <td>Recipient email address and invitation contents</td>
               </tr>
               <tr>
-                <td>Twilio</td>
-                <td>Delivers team invitation text messages</td>
-                <td>Recipient phone number and invitation contents</td>
-              </tr>
-              <tr>
                 <td>Brevo</td>
                 <td>Early-access mailing list on our website only</td>
                 <td>Email address you submit to the signup form</td>
@@ -274,17 +280,19 @@
         </div>
 
         <h3 class="privacy-section__sub">4.3 Text messaging</h3>
-        <p class="privacy-sms-carveout">
-          <strong>
-            Text messaging originator opt-in data and consent will not be shared with any third
-            parties. No mobile information will be shared with third parties or affiliates for
-            marketing or promotional purposes.
-          </strong>
+        <p>
+          <strong>FirstString does not send text messages.</strong> Invitations are delivered by
+          email. A manager can also send an invitation link themselves, from their own phone and
+          their own messaging app &mdash; in that case the message comes from them, and it does not
+          pass through us or any messaging provider.
         </p>
         <p>
-          Twilio appears in the table above because it is the carrier that delivers an invitation
-          text on our behalf. That is the only purpose it receives a phone number for. See
-          <a href="#notifications">section 7</a> for what those messages contain.
+          A phone number you or your manager enters is stored with your profile or your invitation,
+          so teammates can reach you and so an invitation can be matched to you when you accept it.
+          <strong>
+            No mobile information is shared with third parties or affiliates for marketing or
+            promotional purposes.
+          </strong>
         </p>
 
         <h3 class="privacy-section__sub">4.4 For legal reasons</h3>
@@ -374,24 +382,16 @@
 
       <!-- ============================================================ -->
       <section id="notifications" class="privacy-section">
-        <h2 class="privacy-section__title">7. Push notifications, email and SMS</h2>
+        <h2 class="privacy-section__title">7. Push notifications and email</h2>
         <p>
           <strong>Push notifications</strong> are optional and are used for game reminders, call-ups
           when a spot opens, roster changes, and team messages. You can turn them off in your device
           settings at any time.
         </p>
         <p>
-          <strong>Email and SMS</strong> are used for team invitations and essential account
-          messages such as password resets. Standard message and data rates may apply to text
-          messages. Invitation texts are one-off and transactional &mdash; we do not run SMS
-          marketing campaigns. You can reply STOP to opt out of any text we send.
-        </p>
-        <p class="privacy-sms-carveout">
-          <strong>
-            Text messaging originator opt-in data and consent will not be shared with any third
-            parties. No mobile information will be shared with third parties or affiliates for
-            marketing or promotional purposes.
-          </strong>
+          <strong>Email</strong> is used for team invitations and essential account messages such as
+          password resets. <strong>We do not send text messages</strong> &mdash; see
+          <a routerLink="/privacy" fragment="sharing">section 4.3</a>.
         </p>
         <p>
           <strong>Marketing email</strong> is only sent to people who joined our early-access list on
@@ -457,6 +457,17 @@
             messages removed, contact us.
           </li>
           <li>
+            <strong>Moderation reports</strong> are kept while we need them to act on the complaint,
+            and are deleted when either the person who filed the report or the person it concerns
+            deletes their account. The copy emailed to us at the time lives outside the app, so the
+            moderation record survives even though the personal data does not.
+          </li>
+          <li>
+            <strong>A team a manager deletes</strong> goes immediately, along with its roster,
+            schedule, RSVPs, chat and invitations, for everyone on it. A manager can do this without
+            deleting their own account.
+          </li>
+          <li>
             <strong>Marketing list subscriptions</strong> are kept until you unsubscribe.
           </li>
           <li>
@@ -510,6 +521,12 @@
           confirm. If you would rather hand a team to someone else, contact us before deleting and we
           will transfer it.
         </p>
+        <p>
+          <strong>You can also delete a single team without deleting your account.</strong> Open the
+          team from the Teams tab and use Delete team at the bottom of the page. This removes the
+          team's roster, schedule, RSVPs, chat and invitations for everyone on it, and cannot be
+          undone, so the app asks you to type DELETE to confirm.
+        </p>
       </section>
 
       <!-- ============================================================ -->
@@ -561,7 +578,7 @@
           Your data is stored on Google Cloud infrastructure and is encrypted in transit and at rest.
           Access to the database is governed by server-enforced security rules, so one team cannot
           read another team's roster or messages. Passwords are hashed by Firebase Authentication and
-          are never visible to us. API credentials for our email and SMS providers are held in
+          are never visible to us. API credentials for our email provider are held in
           managed secret storage.
         </p>
         <p>
@@ -575,7 +592,7 @@
       <section id="transfers" class="privacy-section">
         <h2 class="privacy-section__title">13. Where your data lives</h2>
         <p>
-          FirstString is operated from Canada, and our providers &mdash; Google, Resend, Twilio, and
+          FirstString is operated from Canada, and our providers &mdash; Google, Resend and
           Brevo &mdash; store and process data on servers in Canada, the United States, and
           elsewhere. This means your information may be transferred outside your home country, and
           may be accessible to courts and law enforcement in those countries under their local laws.

@@ -10,9 +10,10 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+// No global `scroll-behavior: smooth`. It animates the router's anchor scroll, and when the web
+// fonts swap in mid-animation the text above reflows and the page lands off target. Instant
+// scrolls let the browser's scroll anchoring absorb that reflow. Code that wants a smooth
+// scroll passes behavior: 'smooth' explicitly.
 
 body {
   font-family: 'Barlow', sans-serif;

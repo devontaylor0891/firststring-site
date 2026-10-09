@@ -11,7 +11,7 @@ import { COMPANY, formatCompanyAddress } from '../../shared/constants';
 })
 export class PrivacyComponent {
   readonly effectiveDate = 'September 8, 2026';
-  readonly lastUpdated = 'September 18, 2026';
+  readonly lastUpdated = 'October 9, 2026';
   readonly contactEmail = COMPANY.email;
   readonly legalName = COMPANY.legalName;
   readonly operatingName = COMPANY.operatingName;
