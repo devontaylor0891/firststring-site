@@ -2,7 +2,7 @@ import { Component, signal } from '@angular/core';
 
 const FB_URL = 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffirststringapp.com';
 const SHARE_TEXT =
-  'I just joined the early access list for FirstString. Sports team management built for rec captains: roster, scheduling, automatic callups when someone drops, and more. Worth a look: https://firststringapp.com';
+  'FirstString is sports team management built for rec captains: roster, scheduling, automatic callups when someone drops, and more. Free on iPhone and Android during early access: https://firststringapp.com';
 
 @Component({
   selector: 'app-pull-quote',

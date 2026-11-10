@@ -24,6 +24,16 @@
     max-width: 480px;
   }
 
+  &__list-prompt {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 48px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 540px;
+  }
+
   &__iframe {
     width: 100%;
     max-width: 540px;

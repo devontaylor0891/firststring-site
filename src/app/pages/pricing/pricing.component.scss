@@ -148,10 +148,9 @@
   }
 
   &__cta {
+    display: flex;
     width: 100%;
-    text-align: center;
-    font-size: 1rem;
-    padding: 14px 32px;
+    --badge-height: 44px;
   }
 }
 

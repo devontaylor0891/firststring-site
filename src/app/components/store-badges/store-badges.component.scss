@@ -1,0 +1,34 @@
+:host {
+  --badge-height: 48px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.store-badge {
+  display: block;
+  line-height: 0;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.store-badge__img {
+  width: auto;
+  max-width: none;
+
+  &--apple {
+    height: var(--badge-height);
+  }
+
+  // Google's PNG is 250px tall with 41px of clear space around a 168px badge.
+  // Scale it so the visible badge matches Apple's, and pull the padding back in.
+  &--google {
+    height: calc(var(--badge-height) * 250 / 168);
+    margin: calc(var(--badge-height) * -41 / 168);
+  }
+}

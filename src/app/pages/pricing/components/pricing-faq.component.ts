@@ -21,7 +21,7 @@ export class PricingFaqComponent {
     {
       question: 'Is there a free trial?',
       answer:
-        "We're currently in beta. Join the waitlist for early access. Beta users get the first season free and locked-in pricing when we launch publicly.",
+        "We're currently in beta, and FirstString is free during early access. Download it from the App Store or Google Play. Beta users get the first season free and locked-in pricing when paid subscriptions begin.",
       open: signal(false),
     },
     {

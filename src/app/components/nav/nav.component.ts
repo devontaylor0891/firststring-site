@@ -21,13 +21,13 @@ export class NavComponent {
     this.menuOpen.set(false);
   }
 
-  scrollToSignup(): void {
+  scrollToDownload(): void {
     this.closeMenu();
     const el = document.getElementById('early-access');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     } else {
-      sessionStorage.setItem('scrollToSignup', '1');
+      sessionStorage.setItem('scrollToDownload', '1');
       this.router.navigate(['/']);
     }
   }

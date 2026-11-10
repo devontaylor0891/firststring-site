@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { StoreBadgesComponent } from '../../components/store-badges/store-badges.component';
 
 interface FeatureRow {
   id: string;
@@ -12,7 +13,7 @@ interface FeatureRow {
 @Component({
   selector: 'app-features',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, StoreBadgesComponent],
   templateUrl: './features.component.html',
   styleUrl: './features.component.scss',
 })

@@ -44,6 +44,16 @@
     color: var(--text-sub);
   }
 
+  &__badges {
+    --badge-height: 40px;
+    justify-content: flex-start;
+    margin-top: 8px;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+  }
+
   &__nav {
     display: flex;
     flex-direction: column;

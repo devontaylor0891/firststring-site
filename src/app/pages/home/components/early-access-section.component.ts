@@ -1,12 +1,14 @@
 import { Component, AfterViewInit, signal } from '@angular/core';
+import { StoreBadgesComponent } from '../../../components/store-badges/store-badges.component';
 
 const FB_URL = 'https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffirststringapp.com';
 const SHARE_TEXT =
-  'I just joined the early access list for FirstString. Sports team management built for rec captains: roster, scheduling, automatic callups when someone drops, and more. Worth a look: https://firststringapp.com';
+  'FirstString is sports team management built for rec captains: roster, scheduling, automatic callups when someone drops, and more. Free on iPhone and Android during early access: https://firststringapp.com';
 
 @Component({
   selector: 'app-early-access-section',
   standalone: true,
+  imports: [StoreBadgesComponent],
   templateUrl: './early-access-section.component.html',
   styleUrl: './early-access-section.component.scss',
 })
@@ -14,8 +16,8 @@ export class EarlyAccessSectionComponent implements AfterViewInit {
   copied = signal(false);
 
   ngAfterViewInit(): void {
-    if (sessionStorage.getItem('scrollToSignup')) {
-      sessionStorage.removeItem('scrollToSignup');
+    if (sessionStorage.getItem('scrollToDownload')) {
+      sessionStorage.removeItem('scrollToDownload');
       setTimeout(() => {
         document.getElementById('early-access')?.scrollIntoView({ behavior: 'smooth' });
       }, 100);
